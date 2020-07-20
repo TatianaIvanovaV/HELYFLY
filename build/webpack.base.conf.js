@@ -32,7 +32,18 @@ module.exports = {
                 test: /\.(png|jpe?g|gif|svg)$/,
                 loader: 'file-loader',
                 options: {
-                    name: '[name].[ext]'
+                    name: '[name].[ext]',
+                    outputPath: "img",
+                    publicPath: "img"
+                }
+            },
+            {
+                test: /\.(woff(2)?|ttf|eot|svg|otf)(\?v=\d+\.\d+\.\d+)?$/,
+                loader: "file-loader",
+                options: {
+                    name: "[name].[ext]",
+                    outputPath: "fonts",
+                    publicPath: "fonts"
                 }
             },
             {
@@ -53,29 +64,17 @@ module.exports = {
                 ]
             },
             {
-                test: /\.styl$/,
-                use: [
-                    'style-loader',
-                    MiniCssExtractPlugin.loader,
-                    'css-loader',
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            sourceMap: true,
-                            config: {
-                                path: `./postcss.config.js`
-                            }
-                        }
-                    },
-                    'stylus-loader'
-                ]
+                 test: /\.styl$/, 
+                 loader: 'style-loader!css-loader!stylus-loader' 
             },
             {
                 test: /\.pug$/,
-                use: [
-                    'pug-loader'
-                ]
-            },
+                loader: 'pug-loader',
+                options: {
+                pretty: true
+                }
+                }
+               
         ]
     },
     plugins: [  // массив для подключения плагинов
@@ -84,8 +83,12 @@ module.exports = {
             }),
             new CopyWebpackPlugin([ // для каждого каталога с целью копирования создается свой объект (откуда - куда)
                 {
-                    from: `${PATHS.source}/images`,
-                    to: `${PATHS.assets}images`
+                    from: `${PATHS.source}/img`,
+                    to: `${PATHS.assets}img`
+                },
+                {
+                    from: `${PATHS.source}/fonts`,
+                    to: `${PATHS.assets}fonts`
                 },
                 {
                     from: `${PATHS.source}/static`,
