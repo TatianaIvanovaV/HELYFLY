@@ -1,5 +1,31 @@
+
+
 .about
   .container
-    .offer.__main
-      .__title
-      .__video
+    .offer
+      .offer-discription
+        h3.offer-discription__h3 Фотосессия<br> в вертолете
+        p.offer-discription__p
+          |Полет на вертолете это прекрасная возможность получить новые ощущения! А наш замечательный
+          |фотограф запечатлит лучшие моменты
+        ul.offer-discription__list
+          li.offer-discription__item
+            img.img-clock(src="./assets/img/pics/clock.png" alt="")
+            | 3 часа съемки
+          li.offer-discription__item
+            img.img-photocamera(src="./assets/img/pics/photocamera.png" alt="")
+            | Более 50 фотографий
+          li.offer-discription__item
+            img.img-local(src="./assets/img/pics/local.png" alt="")
+            | Москва
+          li.offer-discription__item
+            img.img-chat(src="./assets/img/pics/chat.png" alt="")
+            | Готовы ответить на любые вопросы
+        .offer-discription__rating
+          img.offer-discription__cup.img-cup(src="./assets/img/pics/cup-group.png" alt="")
+          .offer-discription__high-rating Более <b>50</b> отзывов с оценкой 
+          img.offer-discription__srars.img-stars(src="./assets/img/pics/stars-group.png" alt="")
+    .offer-video
+      img.offer-video__preview(src="./assets/img/preview.png" alt="photo-session")
+      img.offer-video__play-icon(src="./assets/img/pics/play-icon.png" alt="")
+      iframe#youtube-video(src="", frameborder="0")
