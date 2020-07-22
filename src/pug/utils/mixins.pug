@@ -1,14 +1,8 @@
 
-mixin discriptionItem(nameSource, paragraph)
-  li.offer-discription__item
-    img(class = "img-" + nameSource)(src = `./assets/img/pics/`${nameSource}`.png`)
-      | paragraph
-+discriptionItem("clock","3 часа съемки")
-+discriptionItem("clock","3 часа съемки")
-+discriptionItem("clock","3 часа съемки")
+mixin picture(directory, name)  
+    img(src="./assets/img/" + directory + '/' + name + '.png', class=name + "-img" alt=name)
 
-mixin gallery(images)
-  img( src = `./img/pic`${images}`.png` )
-+gallery('1')
+mixin discriptionItem(image, paragraph)
+image = picture()
+  image + paragraph
 
-mixin galleryShow()

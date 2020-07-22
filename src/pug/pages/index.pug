@@ -1,4 +1,6 @@
 
+include ../utils/mixins
+
 doctype html
 html(lang="ru")
   head
@@ -8,15 +10,17 @@ html(lang="ru")
     title HELYFLY фотосессия на вертолете
     meta(name="description" content="фотосессия в вертолете, HELYFLY")
     meta(name="keywords" content="фотосессия, полет на вертолете, HELYFLY")
-  body(class=pageClass)
+  body
+    include ../includes/test
     include ../includes/header
-    include ../includes/helimain
-    include ../includes/about
-    include ../includes/gallery
-    include ../includes/autor
-    include ../includes/reserve
-    include ../includes/map
-    include ../includes/reviews
+    main.main-content
+      include ../includes/helimain
+      include ../includes/about
+      include ../includes/gallery
+      include ../includes/autor
+      include ../includes/reserve
+      include ../includes/map
+      include ../includes/reviews
     include ../includes/footer
 
           
