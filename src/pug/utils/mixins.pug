@@ -2,7 +2,12 @@
 mixin picture(directory, name)  
     img(src="./assets/img/" + directory + '/' + name + '.png', class=name + "-img" alt=name)
 
-mixin discriptionItem(image, paragraph)
-image = picture()
-  image + paragraph
+//mixin discriptionItem(image, paragraph)
+  image= 
+  paragraph= p
+    li= image + paragraph
 
+
+//mixin discriptionItem(picture(), paragraph)
+  li.offer-discription__item= picture()
+    p= paragraph
