@@ -1,4 +1,5 @@
 
+- var offerList = [{name: "clock", p: "3 часа съемки"},{name: "photocamera", p: "Более 50 фотографий"},{name: "local", p: "Москва"},{name: "chat", p: "Готовы ответить на любые вопросы"}];
 
 .about
   .container
@@ -9,22 +10,10 @@
           |Полет на вертолете это прекрасная возможность получить новые ощущения! А наш замечательный
           |фотограф запечатлит лучшие моменты
         ul.offer-discription__list
-        //+discriptionItem("clock","3 часа съемки")
-          +discriptionItem("photocamera","Более 50 фотографий")
-          +discriptionItem("local","Москва")
-          +discriptionItem("chat","Готовы ответить на любые вопросы")
-        //li.offer-discription__item
-            img.img-clock(src="./assets/img/pics/clock.png" alt="")
-            | 3 часа съемки
+        each item in offerList
           li.offer-discription__item
-            img.img-photocamera(src="./assets/img/pics/photocamera.png" alt="")
-            | Более 50 фотографий
-          li.offer-discription__item
-            img.img-local(src="./assets/img/pics/local.png" alt="")
-            | Москва
-          li.offer-discription__item
-            img.img-chat(src="./assets/img/pics/chat.png" alt="")
-            | Готовы ответить на любые вопросы
+            +picture('icons', item.name)
+            span= item.p
         .offer-discription__rating
           +picture('icons', 'cup')
           .offer-discription__high-rating Более <b>50</b> отзывов с оценкой 
