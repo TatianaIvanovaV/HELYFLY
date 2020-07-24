@@ -1,3 +1,5 @@
 
 mixin picture(directory, name)  
-    img(src="./assets/img/" + directory + '/' + name + '.png', class=name + "-img" alt=name)
+    img(src="./assets/img/" + directory + '/' + name + '.png', class=name + "-img", alt=name)
+mixin pictureNumber(num)  
+    img.customer__img(src="./assets/img/customers/user" + num + ".png", class="img-user" + num, alt="customer" + num)

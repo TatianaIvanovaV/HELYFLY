@@ -13,9 +13,7 @@
             +picture('icons', item.name)
             span= item.p
         .offer-discription__rating
-          +picture('icons', 'cup')
-          .offer-discription__high-rating Более <b>50</b> отзывов с оценкой 
-          +picture('icons', 'stars-group')(class="offer-discription__stars")
+          block manyReviews
     .offer-video
       +picture('main', 'preview')
       +picture('icons', 'play-icon')
