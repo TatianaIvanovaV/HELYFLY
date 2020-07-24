@@ -1,4 +1,13 @@
 
 extends ../layout/main
-
-
+block variables
+  - var offerList = [{name: "clock", p: "3 часа съемки"},{name: "photocamera", p: "Более 50 фотографий"},{name: "local", p: "Москва"},{name: "chat", p: "Готовы ответить на любые вопросы"}];
+block showAll
+  .show-all.show-all__box
+    if text === "Читать еще"
+      a.show-all__text(href="#") #{text}
+      +picture('icons', 'arrow')
+    else 
+      +picture('icons', 'arrow')
+      a.show-all__text(href="#") #{text}
+      +picture('icons', 'arrow') 
