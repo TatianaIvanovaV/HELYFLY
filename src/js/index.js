@@ -1,2 +1,2 @@
 
-console.log("kdajff");
+  console.log(Object.keys(customerInfo).length);

@@ -1,25 +1,28 @@
 
-- var text= "Показать Все"
-
+- var text= "Показать Все()"
+- var a 
 .reviews
   .container
     h3.reviews__h3 Отзывы:
     .reviews-content
-      block reviews
-      //-.review-item
-        .customer
-          img.customer__img.img-user1(src="./assets/img/user1.png" alt="customer")
-          .customer__name Валерия Антонова
-          .customer__rang Арт-директор
-          .customer__rate
-            img.customer__stars.img-stars(src="./assets/img/pics/stars-group.png" alt="")
+      each elem in customerInfo
+        .review-item
+          .customer
+            +pictureNumber(elem.num)
+            .customer__name #{elem.name}
+            .customer__rang #{elem.rang}
+            .customer__rate
+              +picture('icons', 'stars-group')
             .customer__summary
-              img.customer__summary-check.img-check(src="./assets/img/pics/checkbox.png" alt="")
-              p.customer__summary-reviews Супер! Я бы заказала съемку снова!
-        .review-main
-          p.review-main__p
-            | Хотим выразить огромную благодарность вашей компании! Получили море ощущений, все прошло просто замечательно. Фотки получились великолепные, отдельное спасибо фотографу!
-          p.review-main__date 27 Апреля, 2019г.
+              +picture('icons', 'checkbox')
+            p.customer__summary-reviews Супер! Я бы заказал#{a} съемку снова! 
+            .review-main
+              p.review-main__p #{elem.review}
+              p.review-main__date #{elem.date}
+            //if elem.gender == "female"
+                a= "a"
+              else
+                a= "b"   
     .reviews-show
       block showAll
       
