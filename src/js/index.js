@@ -1,2 +1,2 @@
-
-  console.log(Object.keys(customerInfo).length);
+import "./main"
+import "./yandex-map"

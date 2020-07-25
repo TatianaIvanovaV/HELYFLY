@@ -8,4 +8,9 @@ mixin sex(atr)
         return a
     else
         return b
-        
+mixin yandexPopup(num, title, text)
+    li.yandexmap-popup__list
+          .yandexmap-popup__num #{num}
+          .yandexmap-popup__discr
+            p.yandexmap-popup__title #{title}
+            p.yandexmap-popup__text #{text}    

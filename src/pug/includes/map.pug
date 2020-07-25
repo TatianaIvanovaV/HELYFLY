@@ -1,4 +1,10 @@
 .map
-  .yandexmap
+  .yandexmap#map
   .container
-    .yandexmap-popup
+    .yandexmap-popup 
+      ul.yandexmap-popup__ul
+        +yandexPopup("1","Где встречаемся?","Москва")
+        +yandexPopup("2","Время съемки","3 часа")
+        +yandexPopup("3","Мест осталось:","2 места")
+        li.yandexmap-popup__list
+          block autorAvatar
