@@ -3,7 +3,7 @@ mixin picture(directory, name)
     img(src="./assets/img/" + directory + '/' + name + '.png', class=name + "-img", alt=name)
 mixin pictureNumber(num)  
     img.customer__img(src="./assets/img/customers/user" + num + ".png", class="img-user" + num, alt="customer" + num)
-mixin sex(atr)
+//-mixin sex(atr)
     if atr == "female"
         return a
     else
@@ -14,3 +14,8 @@ mixin yandexPopup(num, title, text)
           .yandexmap-popup__discr
             p.yandexmap-popup__title #{title}
             p.yandexmap-popup__text #{text}    
+mixin social-links()
+    li.social-links__list
+        a.social-links__a(href="#")
+            mixin picture()
+        

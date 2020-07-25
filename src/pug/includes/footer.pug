@@ -3,8 +3,11 @@ footer.footer
     .footer-social
       a.header-inner__logo(href="#")
         +picture('icons', 'logo')
-      nav.social-links
-        //ul
+      nav.footer-social__nav
+        ul.social-links
+          +social-links()
+          
+          li.social-links__list
     .footer-subtitle
       .footer-cards
         +picture('icons', 'master')
