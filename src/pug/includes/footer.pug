@@ -1,14 +1,21 @@
 footer.footer
   .container
-    .footer-social
-      a.header-inner__logo(href="#")
-        +picture('icons', 'logo')
-      nav.footer-social__nav
-        ul.social-links
-          +social-links()
-          
-          li.social-links__list
-    .footer-subtitle
+    .footer-upper
+      .footer-upper__logo
+        a.footer-logo__a.logo(href="#")
+          +picture('icons', 'logo')
+      .footer-upper__social
+        nav.footer-social__nav
+          ul.footer-social__ul
+            +socialLink('vk')
+            +socialLink('fb')
+            +socialLink('insta')
+      .footer-upper__language.dropdown
+        .dropdown__but RU
+          .dropdown-content
+            a(href="#") RU
+            a(href="#") EN
+    .footer-lower
       .footer-cards
         +picture('icons', 'master')
         +picture('icons', 'visa')
