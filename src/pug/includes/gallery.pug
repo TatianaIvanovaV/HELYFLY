@@ -1,5 +1,5 @@
 
-- var text= "Показать все фото"
+- var text= "Показать все" 
 - var maxPics = 12
 - var minPics = 8
 .gallery
@@ -11,6 +11,9 @@
           +pictureNumber(i)
           img(src="./assets/img/gallery/pic" + i + ".png" )
     .gallery-show
-      block showAll
+      .gallery-show__content
+        +picture('icons', 'arrow')
+        a.show-all__text(href="#")= "Показать все фото"
+        +picture('icons', 'arrow')
       
       

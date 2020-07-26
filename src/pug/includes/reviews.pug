@@ -1,6 +1,5 @@
 
-- var text= "Показать Все(Object.keys(arr).length)"
-- var a 
+- var text= "Показать Все" 
 .reviews
   .container
     h3.reviews__h3 Отзывы:
@@ -15,14 +14,20 @@
               +picture('icons', 'stars-group')
             .customer__summary
               +picture('icons', 'checkbox')
-            p.customer__summary-reviews Супер! Я бы заказал#{a} съемку снова! 
+            p.customer__summary-reviews 
+              if elem.gender == "female"
+                p.customer__summary-reviews= "Супер! Я бы заказала съемку снова!"
+              else if elem.gender == "male"
+                p.customer__summary-reviews= "Супер! Я бы заказал съемку снова!"
+              else
+                p.customer__summary-reviews= "Супер! Закажу съемку снова!"
             .review-main
               p.review-main__p #{elem.review}
-              p.review-main__date #{elem.date}
-            //-if elem.gender == "female"
-                a= "a"
-              else
-                a= "b"   
+              p.review-main__date #{elem.date}   
     .reviews-show
-      block showAll
+      .reviews-show__content
+        +picture('icons', 'arrow')
+        a.show-all__text(href="#")= "Показать Все (" + customerInfo.length + ")"
+        +picture('icons', 'arrow')
+      
       
