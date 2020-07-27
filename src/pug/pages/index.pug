@@ -19,6 +19,9 @@ block autorAvatar
     +picture('main', 'autor')
     p.autor-avatar__name Марина Иванова
     p.autor-avatar__range Фотограф
-    a.autor-avatar__seemore(href="#") Показать больше информации о фотографе
+      if autorMoreInfo == true
+        a.autor-avatar__seemore(href="#")!= "Показать больше информации <br>о фотографе"
+      else
+        a.autor-avatar__seemore(href="#")= "Показать больше информации" 
 
         

@@ -1,15 +1,11 @@
 
-- var text= "Показать все" 
-- var maxPics = 12
-- var minPics = 8
 .gallery
   .container
     h3.gallery__h3 Фотографии пакета:
     .gallery-group
-      //--for (var i = 1; i < minPics; i++)
+      //- for (var i = 1; i <= 12; i++)
         .gallery-group__item
-          +pictureNumber(i)
-          img(src="./assets/img/gallery/pic" + i + ".png" )
+          +pictureGallery(i) 
     .gallery-show
       .gallery-show__content
         +picture('icons', 'arrow')
