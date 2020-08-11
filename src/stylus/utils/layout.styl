@@ -1,68 +1,26 @@
-html {
-  line-height: $mainLineHeight;
-  font-size: $mainFontSize;
-  color: $mainFontColor;
-  height: 100%;
-}
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: $mainFont;
-  font-size: $mainFontSize;
-  font-weight: $mainFontWeight;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import "utils/reset.styl"
+@import "utils/fonts.styl"
+@import "utils/vars.styl"
 
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-  cursor: pointer;
-  color: $mainFontColor;
-}
-
-ul, li {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  min-height: 100vh;
-}
-
-.container {
-  width: 1140px;
-  max-width: 95%;
-  margin: 0 auto;
-  position: relative;
-}
-
-.title {
-  font-size: 36px;
-  @include Dosis-Regular;
-  margin-bottom: 23px;
-
-  &--centered {
-    text-align: center;
-  }
-
-  @include phone {
-    font-size: 32px;
-  }
-}
-
-button, .button {
-  cursor: pointer;
-}
+*,
+*::before,
+*::after 
+  box-sizing inherit
+html
+  box-sizing border-box
+  font-size 14px
+body
+  font-family 'Montserrat', sans-serif
+  color black
+  background #fff
+  line-height 24px
+  font-weight 400
+.container 
+  margin 0 auto
+  max-width 1140px
+ul, li 
+  list-style none
+a
+  text-decoration none
+  color black
