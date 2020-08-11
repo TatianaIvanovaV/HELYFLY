@@ -3,7 +3,7 @@
 .reviews
   .container
     h3.reviews__h3 Отзывы:
-    .reviews-content
+    .reviews__content.reviews-list
       each elem in customerInfo
         .review-item
           .customer
@@ -24,10 +24,6 @@
             .review-main
               p.review-main__p #{elem.review}
               p.review-main__date #{elem.date}   
-    .reviews-show
+    .reviews__show-more
       .reviews-show__content
-        +picture('icons', 'arrow')
-        a.show-all__text(href="#")= "Показать Все (" + customerInfo.length + ")"
-        +picture('icons', 'arrow')
-      
-      
+        span.open-scr= "Показать Все (" + customerInfo.length + ")"
