@@ -1,5 +1,53 @@
 .helimain
-  background url(/assets/img/main/helimain.png)no-repeat
+  background url(/assets/img/main/helimain.png) center no-repeat 
   height 840px
-  width auto
-
+  width 100%
+  color white
+  display flex
+  flex-direction column
+  justify-content center
+.main-title
+  &__inner
+    padding-top 25px
+  &__h1
+    font-size 40px
+    line-height 49px
+  &__span 
+    color orange
+  &__bubble
+    margin 20px 0 
+.bubble
+  background orange 
+  border-radius 4px
+  max-width 224px
+  height 88px
+  padding 0 23px
+  position relative
+  display flex
+  &::after
+    content ''
+    position absolute
+    bottom -24px
+    right 75px
+    z-index 9999
+    border 12px solid transparent
+    border-top 12px solid orange
+  &__inner
+    padding-top 12px
+  &__coast
+    font-size 20px
+    padding-bottom 8px
+  &__sum
+    font-weight 800
+    font-size 35px
+.booking-button
+  box-shadow 0px 4px 4px rgba(255, 255, 255, 0.25), 0px 4px 70px rgba(255, 255, 255, 0.7)
+  width 304px
+  height 68px
+  border 3px solid white
+  border-radius 3px
+  color white
+  font-weight 900
+  font-size 18px
+  text-align center
+  padding-top 20px

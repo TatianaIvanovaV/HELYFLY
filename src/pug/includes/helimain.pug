@@ -1,12 +1,11 @@
 .helimain
     .container
-        .main-title
-            h1.main-title__h1 Эксклюзивная фотосессия при полете на вертолете
-            .main-title__bubble
-                +picture('icons', 'bubble')
-                .bubble-inner
-                    span.bubble-inner__coast Стоимость:
-                    span.bubble-inner__sum 1500
-                .bubble-persent
-                    +picture('icons', 'present')
-            a#booking-button.main-title__button Забронировать место
+        .main-title.main-title__inner
+            h1.main-title__h1 Эксклюзивная <span class="main-title__span">фотосессия</span> при полете <br>на вертолете
+            .main-title__bubble.bubble
+                .bubble__inner
+                    .bubble__coast Стоимость:
+                    .bubble__sum 1500₽
+                .bubble__persent 
+            a.main-title__button
+                .booking-button Забронировать место
