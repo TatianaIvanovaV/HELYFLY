@@ -1,4 +1,4 @@
-const path = require('path') // необходимо для корректного формирования путей в разных ОС
+const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin') 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')

@@ -1,6 +1,7 @@
 .offer
-  padding 70px 0
+  padding 70px 0 0
   display flex
+  
   justify-content space-between
   &-discription
     max-width 50%
@@ -27,7 +28,29 @@
       margin-top 32px
       border-top 0.5px solid light-grey
       border-bottom 0.5px solid light-grey   
-  &-test
-    width 554px
-    height 374px
-    background orange
+  &-video
+    &__content 
+      position relative
+      left 4px
+      >iframe
+        z-index 1
+    &__preview
+      position relative
+      cursor pointer
+      z-index 2
+      >.preview-img
+        position absolute
+        top 0
+        left 0
+        height 374px
+        width 554px 
+      >.play-icon-img
+        position absolute
+        top 322px
+        right 40px
+      &:hover
+        >.play-icon-img
+          transform: scale(2.0)
+          transition .5s
+          transform: translate(-30px, -40px) scale(3)
+          
