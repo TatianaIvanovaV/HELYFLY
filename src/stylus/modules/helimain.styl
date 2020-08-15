@@ -20,18 +20,26 @@
   background orange 
   border-radius 4px
   max-width 224px
-  height 88px
+  height 86px
   padding 0 23px
   position relative
   display flex
-  &::after
-    content ''
+  -webkit-box-shadow 0px 4px 6px -2px rgba(0,0,0,0.28)
+  -moz-box-shadow 0px 4px 6px -2px rgba(0,0,0,0.28)
+  box-shadow 0px 4px 6px -2px rgba(0,0,0,0.28)
+  &:after
+    content: ''
     position absolute
-    bottom -24px
-    right 75px
-    z-index 9999
-    border 12px solid transparent
-    border-top 12px solid orange
+    bottom -6px
+    left 124px
+    width 22px
+    height 22px
+    background orange
+    border-radius 5px
+    transform rotate(45deg)
+    -webkit-box-shadow 4px 4px 5px -2px rgba(0,0,0,0.14)
+    -moz-box-shadow 4px 4px 5px -2px rgba(0,0,0,0.14)
+     box-shadow: 4px 4px 5px -2px rgba(0, 0, 0, 0.14)
   &__inner
     padding-top 12px
   &__coast
@@ -51,7 +59,7 @@
     text-align center
     line-height 52px
     position relative
-    margin 17px 0 0 7px
+    margin 16px 0 0 6px
 .booking-button
   box-shadow 0px 4px 4px rgba(255, 255, 255, 0.25), 0px 4px 70px rgba(255, 255, 255, 0.7)
   width 304px
