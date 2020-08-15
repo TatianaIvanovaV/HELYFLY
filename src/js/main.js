@@ -21,3 +21,5 @@
       $(this).data('status', false);
     }
 });
+
+/*---  read-more --- */

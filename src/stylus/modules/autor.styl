@@ -1,8 +1,38 @@
 .autor
-  padding-top 37px
   &-about
+    padding 35px 0 8px
+    border-bottom 1px solid light-grey
+    display flex
+    justify-content space-between
     &__avatar
       position relative
+      display flex
+      justify-content center
+      width 45%
+      padding 32px 0 0
       >img 
         position absolute
-
+        top 20px
+        right 22%
+      >.autor-avatar
+        text-align center
+    &__content
+      width 50%
+    &__h3
+      font-weight 500
+      font-size 18px
+      line-height 26px
+    &__read
+      margin 12px 0 40px
+      font-size 16px
+      line-height 24px
+    &__p
+      &--full
+        display none
+    &__show-more
+      font-weight 500
+      font-size 16px
+      line-height 23px
+      margin 5px 0
+      >img.up
+        transform rotate(180deg)
