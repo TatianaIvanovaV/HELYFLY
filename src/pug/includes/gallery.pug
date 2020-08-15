@@ -1,4 +1,5 @@
 
+
 .gallery
   .container
     .gallery__content
@@ -6,23 +7,9 @@
       .gallery__group 
         - for (var i = 1; i <= 12; i++)
           .gallery__item
-            +pictureGallery(i) 
+            +pictureGallery(i)
       .gallery__show
-        span.gallery__span.open-scr Показать все фото
-        //-.gallery-show__content
+        .gallery__inner
           +picture('icons', 'arrow')
-          a.show-all__text(href="#")= "Показать все фото"
+          span.gallery__span.open-scr Показать все фото
           +picture('icons', 'arrow')
-        //-if classList= items4
-              - for (var i = 1; i <= 8; i++)
-              .gallery-group__item
-                +pictureGallery(i)
-            else if classList= items3
-              - for (var i = 1; i <= 6; i++)
-              .gallery-group__item
-                +pictureGallery(i)
-            else 
-              - for (var i = 1; i <= 12; i++)
-                .gallery-group__item
-                  +pictureGallery(i)
-        
