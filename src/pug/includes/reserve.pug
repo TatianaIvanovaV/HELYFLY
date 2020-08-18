@@ -2,18 +2,18 @@
 .reserve
   .container
     h3.reserve__h3 Доступная съемка <br>в ближайшее время:
-    .reserve-soon
-      .reserve-date 
-        p.reserve-date__p Пятница, <b>14</b> сентября
+    .reserve__container
+      .reserve__date 
+        p.reserve__p Пятница, <b>14</b> сентября
         +picture('icons', 'calendar1')
       block reserveTime
       each item in interval
-        .reserve-time
-          .timetable
-            p.timetable__interval #{item.time}
-            p.timetable__cost #{item.cost}
-            p.timetable__places Осталось — 1 место
-          a#choose-button.reserve-time__button Выбрать
+        .reserve__time
+          .reserve__timetable
+            p.reserve__interval #{item.time}
+            p.reserve__cost #{item.cost}
+            p.reserve__places Осталось — 1 место
+          a#choose-button.reserve__button Выбрать
       block manyReviews 
 
 
