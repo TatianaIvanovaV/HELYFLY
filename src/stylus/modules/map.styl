@@ -1,16 +1,70 @@
 .yandexmap
-    height 509px
-    width 100%
-    z-index 2
-.yandexmap-popup
+  height 509px
+  width 100%
+  z-index 2
+  &-popup
     display none
     z-index 1
-    margin-top -485px
+    margin-top -490px
     position absolute
     width 420px
     height 469px
-    background #FFFFFF
-    box-sizing border-box
+    background white
+    border 1px solid light-grey
+    padding 51px 0 58px 30px
+    &__list
+      display flex
+      margin-bottom 35px
+    &__num
+      font-weight bold
+      font-size 35px
+      line-height 51px
+      text-align center
+      color white
+      background orange 
+      border-radius 50%
+      height 61px
+      width 61px
+      padding-top 5px
+    &__discr
+      display flex 
+      flex-direction column
+      margin-left 18px
+      padding-top 2px
+    &__title
+      font-weight 500
+      font-size 18px
+      line-height 27px
+      margin-bottom 5px
+    &__text
+      font-size 18px
+      line-height 26px
+.photographer
+  &__avatar
+    width 67px
+    height 67px
+    >img 
+      margin-top 5px
+      width 67px
+      height auto  
+  &__discr
+    padding 5px 0 0 10px
+  &__name 
+    font-weight 500
+    font-size 18px
+    line-height 22px
+  &__rang
+    margin-top 3px
+    font-size 16px
+    line-height 24px
+  &__info
+    font-weight 500
+    font-size 14px
+    line-height 21px
+    color blue
+    cursor pointer
+    &:hover
+      text-decoration underline
 .modal__show 
-    display block
+  display block
   

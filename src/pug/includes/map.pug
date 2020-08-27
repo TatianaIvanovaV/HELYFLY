@@ -1,5 +1,4 @@
 
-- var autorMoreInfo= false
 .map
   .yandexmap#map
   .container
@@ -8,5 +7,10 @@
         +yandexPopup("1","Где встречаемся?","Москва")
         +yandexPopup("2","Время съемки","3 часа")
         +yandexPopup("3","Мест осталось:","2 места")
-        li.yandexmap-popup__list
-          block autorAvatar
+        li.yandexmap-popup__list.photographer
+          .photographer__avatar
+            +picture('main', 'autor')
+          .photographer__discr
+            p.photographer__name Мария Иванова
+            p.photographer__rang Фотограф
+            p.photographer__info Показать больше информации
