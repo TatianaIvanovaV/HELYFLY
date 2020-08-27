@@ -1,26 +1,30 @@
 footer.footer
-  .container
-    .footer-upper
-      .footer-upper__logo
-        a.footer-logo__a.logo(href="#")
-          +picture('icons', 'logo')
-      .footer-upper__social
-        nav.footer-social__nav
-          ul.footer-social__ul
-            +socialLink('vk')
-            +socialLink('fb')
-            +socialLink('insta')
-      .footer-upper__language.dropdown
-        .dropdown__but RU
-          .dropdown-content
-            a(href="#") RU
-            a(href="#") EN
-    .footer-lower
-      .footer-cards
-        +picture('icons', 'master')
-        +picture('icons', 'visa')
-      .footer-copyright
-        p.footer-copyright__techapp Тех. поддержка: 
-          a.tel__link(href="tel:+7800700-00-00") 8(800)700-00-00
-        p.footer-copyright__right © 2018 HELYFLY. All Rights Reserved.
+  .footer-upper
+    .container
+      .footer-upper__main
+        .footer-upper__logo
+          a.footer-upper__a(href="#")
+            +picture('icons', 'logo')
+        .footer-upper__links
+          nav.footer-upper__social
+            ul.footer-upper__list
+              +socialLink('vk')
+              +socialLink('fb')
+              +socialLink('insta')
+          .footer-upper__language
+            select.footer-upper__select
+              option.footer-upper__option.option--ru RU 
+              option.footer-upper__option.option--en EN 
+            .footer-upper__dropdown
+              +picture('icons', 'arrow')
+  .footer-lower
+    .container
+      .footer-lower__main
+        .footer-lower__cards
+          +picture('icons', 'master')
+          +picture('icons', 'visa')
+        .footer-lower__copyright
+          p.footer-lower__techapp Тех. поддержка: 
+            a.footer-lower__tel(href="tel:+7800700-00-00") 8(800)700-00-00
+          p.footer-lower__right © 2018 HELYFLY. All Rights Reserved.
     
