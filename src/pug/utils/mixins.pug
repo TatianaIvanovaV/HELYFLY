@@ -14,4 +14,9 @@ mixin yandexPopup(num, title, text)
 mixin socialLink(net)
     li.footer-upper__item
         a.footer-upper__a(href="#")
-           img(src="./assets/img/icons/" + net + '.png', class=net + "-img", alt=net)      
+           img(src="./assets/img/icons/" + net + '.png', class=net + "-img", alt=net) 
+mixin popupForm(title, name)
+    label.popup__label
+        .popup__title #{title}
+            span.popup__span *
+        input.popup__input(class="name") 
