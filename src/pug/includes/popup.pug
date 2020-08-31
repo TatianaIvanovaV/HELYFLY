@@ -4,12 +4,12 @@
       .popup__close
         +picture('icons', 'close')
       h3.popup__h3 Бронирование
-      form.popup__form(action="" method="POST")
-        +popupForm("Дата", "date")
+      form.popup__form(action="" method="")
+        +popupForm("Дата", "date", "date", "date")
         +popupForm("Email", "email")
-        +popupForm("Имя")
-        +popupForm("Фамилия")
-        +popupForm("Телефон")
+        +popupForm("Имя", "name", "person-name")
+        +popupForm("Фамилия","person-surname")
+        +popupForm("Телефон", "tel")
         label.popup__label
           .popup__title Данные карты
               span.popup__span *
@@ -17,7 +17,7 @@
           input.popup__input-validity 
           input.popup__input-cvv
         label.popup__label-agree
-          input.popup__check(type="checkbox")
-          +picture('icons', 'checkbox-m2')
+          input.popup__check(type="checkbox", name="agree")
+          span.popup__check-orange
           p.popup__p Я согласен с пользовательским<br> соглашением и публичной офертой
-        button.popup__button Забронировать
+        button.popup__button(type="submit") Забронировать
