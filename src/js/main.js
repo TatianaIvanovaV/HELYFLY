@@ -21,5 +21,22 @@
       $(this).data('status', false);
     }
 });
-
 /*---  read-more --- */
+/*---  open/close pop-up ---*/
+
+$(".booking-button").on("click", function() {
+  $(".popup__overlay, .popup__window").addClass("active");
+});
+
+$(".popup__close-button, .popup__overlay").on("click", function() {
+  $(".popup__overlay, .popup__window").removeClass("active");
+});
+
+/*---  input-mask for pop-up ---*/
+
+import Inputmask from "inputmask";
+
+Inputmask({"mask": "+7 (999) 999-9999"}).mask('input[name=person-tel]');
+Inputmask({"mask": "99 / 99"}).mask('input[name=exp-date]');
+Inputmask({"mask": "9999-9999-9999-9999"}).mask('input[name=card-number]');
+

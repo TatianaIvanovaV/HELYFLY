@@ -1,20 +1,29 @@
-/*.popup
-  width 100%
-  min-height 100%
-  background-color  rgba(0,0,0,0.5)
-  overflow hidden
-  position fixed
-  top 0px
-  display none*/
 .popup
+  position relative
+  &__overlay
+    position fixed
+    display none
+    top 0
+    left 0
+    width 100%
+    height 100vh
+    background-color rgba(0,0,0,0.5)
+    z-index 10
+    &.active
+      display block
   &__window
+    display none
+    position absolute
+    top 231px 
+    left 27%
     max-width 615px
     height 887px
     background white
     border-radius 6px
     padding 22px 22px
-    margin 231px auto
-    /*box-shadow 0px -1px 5px 6px rgba(0,0,0,0.75)*/
+    z-index 12
+    &.active
+      display block
   &__close
     display flex
     justify-content flex-end
@@ -27,9 +36,9 @@
     font-size 22px
     line-height 33px
     text-align center
-    margin 17px 0 25px
+    margin 17px 0 26px
   &__form
-    padding 0 74px
+    padding 0 75px
   &__title
     margin 10px 0
     font-weight 500
@@ -43,10 +52,10 @@
     border 1px solid light-grey
     border-radius 3px
     padding 0 14px 0 20px 
-    /*&-card-num
+    &-card-num
       border-bottom transparent
       margin-bottom 0
-      border-radius 3px 3px 0 0*/
+      border-radius 3px 3px 0 0
     &-validity, &-cvv
       padding 0 20px
       border 1px solid light-grey
@@ -60,7 +69,7 @@
       border-left transparent 
   &__label-agree
     display flex
-    margin-top 36px
+    margin 36px 0 0 2px
   &__check-orange 
     position relative
     top 0 
@@ -83,7 +92,7 @@
     border none
     border-radius 3px
     color white
-    margin 21px 14px 0px
+    margin 21px 15px 0px
     padding-top 5px
     &:hover
       cursor pointer
@@ -112,8 +121,7 @@ input
       display block
       background url("/assets/img/icons/calendar2.png")
       width 21px
-      height 23px
-     
+      height 23px   
   &[placeholder]
     light-grey
     font-family Montserrat

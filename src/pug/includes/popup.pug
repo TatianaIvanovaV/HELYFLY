@@ -1,5 +1,5 @@
 .popup
-  .popup__owerlay
+    .popup__overlay
     .popup__window
       .popup__close
         span.popup__close-button
@@ -10,14 +10,13 @@
         +popupForm("Email", "Электронная почта", "email", "person-email")
         +popupForm("Имя", "", "text", "person-name")
         +popupForm("Фамилия", "", "text", "person-surname")
-        +popupForm("Телефон", "+7 (905) 184-81-40", "tel", "person-tel", "+[7]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}")
+        +popupForm("Телефон", "+7 (905) 184-81-40", "tel", "person-tel")
         label.popup__label
-          //-.popup__title Данные карты
+          .popup__title Данные карты
               span.popup__span *
-          //-input.popup__input.popup__input-card-num(type="text", placeholder="Номер карты", required)
-          +popupForm("Данные карты", "Номер карты", "text", "person-cardNum")
-          input.popup__input-validity(type="text", placeholder="Срок действия" required)
-          input.popup__input-cvv(type="text", placeholder="CVV", required)
+          input.popup__input.popup__input-card-num(type="tel", placeholder="Номер карты", name="card-number", required)
+          input.popup__input-validity(type="tel", placeholder="Срок действия", name="exp-date", required)
+          input.popup__input-cvv(type="password", placeholder="CVV", maxlength="3" required)
         label.popup__label-agree
           input.popup__check(type="checkbox", name="agree", required)
           span.popup__check-orange

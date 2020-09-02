@@ -15,8 +15,13 @@ mixin socialLink(net)
     li.footer-upper__item
         a.footer-upper__a(href="#")
            img(src="./assets/img/icons/" + net + '.png', class=net + "-img", alt=net) 
-mixin popupForm(title, placeholder, type, name, pattern)
+mixin popupForm(title, placeholder, type, name)
     label.popup__label
         .popup__title #{title}
             span.popup__span *
-        input.popup__input(placeholder=placeholder, type=type, name=name, pattern=pattern, required) 
+        input.popup__input(
+            placeholder=placeholder
+            type=type
+            name=name
+            required
+            )
