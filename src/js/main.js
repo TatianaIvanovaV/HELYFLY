@@ -22,6 +22,14 @@
     }
 });
 /*---  read-more --- */
+
+  $('.open-scr').click(function(){
+    $(this).siblings().slideToggle(300); 
+    $(this).remove();
+    return false;
+  });
+
+
 /*---  open/close pop-up ---*/
 
 $(".booking-button").on("click", function() {
