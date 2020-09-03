@@ -5,11 +5,7 @@
     font-size 20px
     line-height 29px
   &__list
-    margin-top 45px
-  &__item
-    margin-bottom 30px
-    &:nth-child(n+4)
-      display none
+    margin-top 45px 
   &__show
     font-weight 500
     font-size 17px
@@ -19,10 +15,11 @@
     padding 8px 0
   &__inner
     margin-right 12px
-    >img.up 
+    >img.upp 
       transform rotate(180deg)
 .customer
   display flex
+  margin-bottom 30px
   &__main
     margin 10px 0 0 20px
     max-width 510px
@@ -50,3 +47,6 @@
     line-height 21px
     color light-grey
     padding 13px 0 27px
+.reviews__item:nth-child(n+4)
+  display none
+  

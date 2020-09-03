@@ -5,27 +5,28 @@
     h3.reviews__h4 Отзывы:
     ul.reviews__list
       each elem in customerInfo
-        li.reviews__item.customer
-          .customer__avatar
-            +pictureCustomer(elem.num)
-          .customer__main
-            .customer__name #{elem.name}
-            .customer__rang #{elem.rang}
-            .customer__rate
-              .customer__stars-group
-                +picture('icons', 'stars-group')
-              .customer__summary
-                +picture('icons', 'checkbox')
-              p.customer__opinion 
-                if elem.gender == "female"
-                  p.customer__opinion= "Супер! Я бы заказала съемку снова!"
-                else if elem.gender == "male"
-                  p.customer__opinion= "Супер! Я бы заказал съемку снова!"
-                else
-                  p.customer__opinion= "Супер! Закажу съемку снова!"
-            .customer__review
-              p.customer__p #{elem.review}
-              p.customer__date #{elem.date}   
+        li.reviews__item
+          .customer
+            .customer__avatar
+              +pictureCustomer(elem.num)
+            .customer__main
+              .customer__name #{elem.name}
+              .customer__rang #{elem.rang}
+              .customer__rate
+                .customer__stars-group
+                  +picture('icons', 'stars-group')
+                .customer__summary
+                  +picture('icons', 'checkbox')
+                p.customer__opinion 
+                  if elem.gender == "female"
+                    p.customer__opinion= "Супер! Я бы заказала съемку снова!"
+                  else if elem.gender == "male"
+                    p.customer__opinion= "Супер! Я бы заказал съемку снова!"
+                  else
+                    p.customer__opinion= "Супер! Закажу съемку снова!"
+              .customer__review
+                p.customer__p #{elem.review}
+                p.customer__date #{elem.date}   
     .reviews__show
       .reviews__inner
         +picture('icons', 'arrow')
