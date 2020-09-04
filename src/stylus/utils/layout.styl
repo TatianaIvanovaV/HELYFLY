@@ -2,6 +2,7 @@
 @import "utils/reset.styl"
 @import "utils/fonts.styl"
 @import "utils/vars.styl"
+@import "utils/media.styl"
 
 *,
 *::before,
@@ -16,6 +17,8 @@ body
   background white
   line-height 24px
   font-weight 400
+  +below(770px)
+    background red
 .container
   width 100%
   margin 0 auto
