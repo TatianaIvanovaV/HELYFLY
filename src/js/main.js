@@ -2,10 +2,10 @@
 'use strict';
 
 /*---  video-player ---*/
-  /*$('#play-video').on('click', function() {
+  $('#play-video').on('click', function() {
     $("#video")[0].src += "&autoplay=1";
     $(this).hide();   
-  });*/
+  });
 
 /*---  gallery-images --- */ 
   $('.gallery__span').click(function(){
