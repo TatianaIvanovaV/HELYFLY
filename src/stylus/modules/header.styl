@@ -2,12 +2,37 @@
 .header-inner
     display flex
     justify-content flex-start
+    flex-wrap wrap
     align-items center 
     height 100px 
+    +below(320px)
+        justify-content space-between
+        height 60px
+        padding 6px 5px 0
     &__logo
-        position relative
-        top 3px
+        font-size 32px
+        font-weight 500
+        letter-spacing -1.5px
+        margin-left -3px
+        +below(768px)
+            margin-left 0px
+            font-size 28px
+        +below(320px)
+            margin-left 0px
+            font-size 22px
     &__tel
         padding-left 37px
+        +below(320px)
+            display none
+    &__location
+        display none
+        +below(320px)
+            display block
+            color blue
+            margin-right 42px
+    &__autorization
+        display none
+        +below(320px)
+            display block
 .span-grey
     color grey
