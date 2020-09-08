@@ -14,9 +14,9 @@
         .offer-discription__rating
           block manyReviews
       .offer-video
-        .offer-video__content
-          .offer-video__preview#play-video
+        .offer-video__preview#play-video
             +picture('main', 'preview')
             +picture('icons', 'play-icon')
-          iframe#video(width="554" height="374" src="//www.youtube.com/embed/9B7te184ZpQ?rel=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+        .offer-video__any
+          iframe.offer-video__iframe#video(width="552" height="372" src="//www.youtube.com/embed/9B7te184ZpQ?rel=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
           

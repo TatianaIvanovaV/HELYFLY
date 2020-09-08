@@ -3,9 +3,9 @@
   display flex
   justify-content space-between
   &-discription
-    max-width 50%
+    width 50%
     &__title
-      padding-right 15px
+      margin-right 15px
     &__h2
       font-weight 500
       font-size 40px
@@ -28,28 +28,70 @@
       border-top 0.5px solid light-grey
       border-bottom 0.5px solid light-grey   
   &-video
-    &__content 
-      position relative
-      left 4px
-      >iframe
-        z-index 1
-    &__preview
+    width 554px
+    
+    left 3px
+    position relative
+    &__preview 
       position relative
       cursor pointer
-      z-index 2
+      border-radius 4px
       >.preview-img
         position absolute
-        top 0
-        left 0
-        height 374px
-        width 554px 
+        top 0px 
+        left 0px
+        height auto
+        width 100%
+        z-index 2
       >.play-icon-img
         position absolute
+        z-index 3
         top 322px
-        right 40px
+        right 41px
       &:hover
         >.play-icon-img
-          transform: scale(2.0)
+          transform scale(2.0)
           transition .5s
-          transform: translate(-30px, -40px) scale(3)
-          
+          transform translate(-30px, -50px) scale(5)
+    &__any
+      position relative
+      padding-bottom 56.25%
+      padding-top 30px
+      height 0
+      overflow hidden
+    &__iframe
+      position absolute
+      top 0
+      left 0
+      padding 2px
+      width 100%
+      height 100%
+      z-index 1
+
+    /*width 554px
+    position relative
+    left 3px
+    &__preview 
+      cursor pointer
+      border-radius 4px
+      >.preview-img
+        position absolute
+        top 0px 
+        left 0px
+        height auto
+        width 100%
+      >.play-icon-img
+        position absolute
+      &:hover
+        >.play-icon-img
+          transform scale(2.0)
+          transition .5s
+          transform translate(-30px, -40px) scale(3)*/
+    /*&__iframe
+      position absolute 
+      top 0px 
+      left 0px
+      padding 2px
+      width 100%
+      heigth 100%
+      z-index -1*/
