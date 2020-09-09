@@ -1,16 +1,26 @@
 .gallery
   &__content
     padding-top 29px
+    +below(320px)
+      padding-top 60px
   &__h3
     font-weight 500
     font-size 20px
     line-height 29px 
     margin-bottom 34px
+    +below(320px)
+      font-weight normal
+      font-size 28px
+      line-height 34px
+      margin-bottom 0px
+      text-align center
+      padding 0 10px
   &__group
-    display flex
-    flex-wrap wrap
-    justify-content center
-    margin 0 -5px 0 -5px
+    &-inner
+      display flex
+      flex-wrap wrap
+      justify-content center
+      margin 0 -5px 0 -5px
   &__item 
     max-width 277px
     margin 0 5px 3px 5px
