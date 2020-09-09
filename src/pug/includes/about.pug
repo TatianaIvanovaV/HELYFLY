@@ -5,12 +5,19 @@
       .offer-discription
         .offer-discription__title
           h2.offer-discription__h2 Фотосессия<br> в вертолете
-          p.offer-discription__p Полет на вертолете это прекрасная возможность получить новые ощущения! А наш замечательный фотограф запечатлит лучшие моменты
-          ul.offer-discription__list
-          each item in offerList
-            li.offer-discription__item
-              +picture('icons', item.name)
-              span= item.p
+          p.offer-discription__p Полет на вертолете это прекрасная возможность получить новые ощущения! А наш замечательный фотограф запечатлит лучшие моменты!
+          .offer-discription__list
+            ul
+            each item in offerList
+              li.offer-discription__item
+                +picture('icons', item.name)
+                span= item.p
+          .offer-discription__list--mob
+            ul
+            each item in offerListMobile
+              li.offer-discription__item
+                +picture('icons', item.name)
+                span= item.p
         .offer-discription__rating
           block manyReviews
       .offer-video
@@ -19,4 +26,6 @@
           +picture('icons', 'play-icon')
         .offer-video__wrap
           iframe.offer-video__iframe#video(width="552" height="372" src="//www.youtube.com/embed/9B7te184ZpQ?rel=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+      h2.offer-discription__h2--mob Фотосессия<br> в вертолете
+      
           
