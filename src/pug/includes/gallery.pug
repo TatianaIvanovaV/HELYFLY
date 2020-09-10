@@ -4,13 +4,13 @@
   .container
     .gallery__content
       h3.gallery__h3 Фотографии пакета<span class="d-none">:</span>
-      .gallery__group
-        .gallery__group-inner 
+      .gallery__inner
+        .gallery__group 
           - for (var i = 1; i <= 12; i++)
             .gallery__item
               +pictureGallery(i)
-      .gallery__show
-        .gallery__inner
-          +picture('icons', 'arrow')
-          span.gallery__span.open-scr Показать все фото
-          +picture('icons', 'arrow')
+        .gallery__show
+          .gallery__show-more-inner
+            +picture('icons', 'arrow')
+            span.gallery__span.open-scr Показать все фото
+            +picture('icons', 'arrow')

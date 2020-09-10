@@ -1,6 +1,6 @@
 .gallery
   &__content
-    padding-top 29px
+    padding 26px 0 0 3px
     +below(320px)
       padding-top 60px
   &__h3
@@ -16,16 +16,23 @@
       text-align center
       padding 0 10px
   &__group
-    &-inner
       display flex
       flex-wrap wrap
       justify-content center
       margin 0 -5px 0 -5px
   &__item 
-    max-width 277px
     margin 0 5px 3px 5px
+    +below(1140px)
+      &:nth-child(n+7)
+        display none
+    +below(881px)
+      &:nth-child(n+5)
+        display none
     &:nth-child(n+9)
       display none
+    >img 
+      width 100%
+      height auto
   &__show
     font-weight 500
     font-size 17px
@@ -34,7 +41,7 @@
     justify-content center
     border-bottom 1px solid light-grey
     padding 30px 0 22px
-  &__inner
-    margin-right 12px
-    >img.up 
-      transform rotate(180deg)
+    &-more-inner
+      margin-right 12px
+      >img.up 
+        transform rotate(180deg)
