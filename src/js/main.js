@@ -22,6 +22,26 @@
 });
 
 
+/*---  gallery-carousel --- 
+
+
+$(document).ready(function(){
+  $('.owl-carousel').owlCarousel({
+    loop:true,
+    nav: false,
+    dots: true,
+    margin:10,
+    responsiveClass:true,
+    responsive:{
+      0:{
+        items:1,
+        nav:false
+      }
+    }
+  });
+});
+*/
+
 /*---  read-more --- */
   $('.autor-about__span').click(function(){
     $(this).siblings().slideToggle(300); 
