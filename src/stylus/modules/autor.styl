@@ -4,20 +4,36 @@
     border-bottom 1px solid light-grey
     display flex
     justify-content space-between
+    +below(576px)
+      flex-direction column-reverse
+      border-bottom none
     &__avatar
       position relative
       display flex
       justify-content center
       width 45%
       padding 32px 0 0
+      +below(576px)
+        width 100%
+        padding 18px 14px 0 0 
+        margin-bottom 18px
       >img 
         position absolute
         top 20px
         right 22%
+        +below(576px)
+          right 32%
+        +below(450px)
+          right 20%
+        +below(320px)
+          top 5px
+          right 0%
       >.autor-avatar
         text-align center
     &__content
       width 50%
+      +below(576px)
+        width 100%
     &__h3
       font-weight 500
       font-size 18px
@@ -26,11 +42,15 @@
       margin 13px 0 40px
       font-size 16px
       line-height 24px
+      +below(320px)
+        margin-bottom 25px
     &__p
       &--full
         display none
     &__show-more
       margin 5px 0
+      +below(320px)
+        margin 20px 0 
     &__span
       font-weight 500
       font-size 16px
@@ -38,6 +58,8 @@
 .autor-avatar
   line-height 21px
   padding-right 4px
+  +below(320px)
+    padding-right 0px
   >img
     margin-bottom 18px
   &__name
