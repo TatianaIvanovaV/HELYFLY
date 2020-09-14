@@ -2,17 +2,28 @@
   height 509px
   width 100%
   z-index 2
+  +below(320px)
+    height 423px
   &-popup
-    z-index 1
-    margin-top -490px
-    position absolute
-    width 420px
-    height 469px
-    background white
-    border 1px solid light-grey
-    padding 51px 0 58px 30px
-    +below(320px)
-      display none
+    position relative
+    &__content
+      z-index 1
+      bottom 20px
+      position absolute
+      width 420px
+      height 469px
+      background white
+      border 1px solid light-grey
+      padding 51px 0 58px 30px
+      +below(768px)
+        width 300px
+      +below(576px)
+        position relative
+        top 52px
+        left 10px
+      +below(320px)
+        width 274px
+        height 380px
     &__list
       display flex
       margin-bottom 35px

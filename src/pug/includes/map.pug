@@ -2,15 +2,16 @@
 .map
   .yandexmap#map
   .container
-    .yandexmap-popup 
-      ul.yandexmap-popup__ul
-        +yandexPopup("1","Где встречаемся?","Москва")
-        +yandexPopup("2","Время съемки","3 часа")
-        +yandexPopup("3","Мест осталось:","2 места")
-        li.yandexmap-popup__list.photographer
-          .photographer__avatar
-            +picture('main', 'autor')
-          .photographer__discr
-            p.photographer__name Мария Иванова
-            p.photographer__rang Фотограф
-            p.photographer__info Показать больше информации
+    .yandexmap-popup
+      .yandexmap-popup__content 
+        ul.yandexmap-popup__ul
+          +yandexPopup("1","Где встречаемся?","Москва")
+          +yandexPopup("2","Время съемки","3 часа")
+          +yandexPopup("3","Мест осталось:","2 места")
+          li.yandexmap-popup__list.photographer
+            .photographer__avatar
+              +picture('main', 'autor')
+            .photographer__discr
+              p.photographer__name Мария Иванова
+              p.photographer__rang Фотограф
+              p.photographer__info Показать больше информации
