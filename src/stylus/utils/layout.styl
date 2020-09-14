@@ -31,8 +31,7 @@ a
 .chat-img
   height auto
   width 30px
-.many-reviews
-  position relative 
+.many-reviews 
   font-size 18px
   display flex
   justify-content flex-start
@@ -41,26 +40,31 @@ a
   +below(320px)
     height 69px
     font-size 14px
-    flex-direction column
-    align-items flex-start
-  &__span
-    margin 0 15px 0 10px
-    +below(320px)
-      margin 11px 0 0 48px
   >.cup-img 
     padding 0 0px 9px 2px
+  &__inner
+    display flex
+    justify-content flex-start
+    align-items center
+    +below(992px)
+      flex-direction column
+      align-items flex-start
+      margin 0 0 0 10px
+      padding 0 0 10px
+      +below(320px)
+        margin 0 0 0 14px
+        padding 0px
+  &__span
+    margin 0 15px 0 10px
+    +below(992px)
+      margin 0
     +below(320px)
-      display none
-  >.cup-for-mob-img
-    display none
-    +below(320px)
-      display block
-      position absolute 
-      top 13px 
-      left -2px
+      margin -4px 0 4px 
   >.stars-group-img
+    +below(992px)
+      margin 0
     +below(320px)
-      margin 3px 0 0 48px
+      margin 0 /*3px 0 0 48px*/
 .open-scr
   color blue
   cursor pointer
@@ -77,3 +81,7 @@ a
   display none
   +below(320px)
     display block
+.bold
+  font-weight bold
+  +below(320px)
+    font-weight normal

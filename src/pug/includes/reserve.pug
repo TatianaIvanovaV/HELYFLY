@@ -1,10 +1,10 @@
 
 .reserve
   .container
-    h3.reserve__h3 Доступная съемка <br>в ближайшее время:
+    h3.reserve__h3 Доступная съемка <br>в ближайшее время<span class="d-none">:</span>
     .reserve__container
       .reserve__date 
-        p.reserve__p Пятница, <b>14</b> сентября
+        p.reserve__p Пятница, <span class="bold">14</span> сентября
         +picture('icons', 'calendar1')
       block reserveTime
       each item in interval
