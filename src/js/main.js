@@ -1,6 +1,8 @@
 
 'use strict';
 
+
+
 /*---  video-player ---*/
   $('#play-video').on('click', function() {
     $("#video")[0].src += "&autoplay=1";
@@ -22,25 +24,28 @@
 });
 
 
-/*---  gallery-carousel --- 
+/*---  gallery-carousel --- */
 
+import $ from 'jquery'
+import 'slick-carousel'
 
-$(document).ready(function(){
-  $('.owl-carousel').owlCarousel({
-    loop:true,
-    nav: false,
-    dots: true,
-    margin:10,
-    responsiveClass:true,
-    responsive:{
-      0:{
-        items:1,
-        nav:false
+$('.car').slick({
+  dots: false,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 320,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
       }
     }
-  });
+  ]
 });
-*/
+
 
 /*---  read-more --- */
   $('.autor-about__span').click(function(){
