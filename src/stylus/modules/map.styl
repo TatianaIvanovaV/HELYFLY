@@ -8,7 +8,7 @@
     position relative
     &__content
       z-index 1
-      bottom 20px
+      bottom 22px
       position absolute
       width 420px
       height 469px
@@ -20,13 +20,18 @@
       +below(576px)
         position relative
         top 52px
-        left 10px
+        left 8px
       +below(320px)
         width 274px
         height 380px
-    &__list
+    &__list,
+    &__list-autor
       display flex
       margin-bottom 35px
+    &__list
+      +below(576px)
+        vertical-align middle
+        background lightgreen
     &__num
       font-weight bold
       font-size 35px
@@ -79,4 +84,9 @@
       text-decoration underline
 .modal__show 
   display block
-  
+.slick-arrow 
+  background url('/assets/img/icons/arrow.png')no-repeat 
+.slick-arrow.slick-prev 
+  transform rotate(90deg)
+.slick-arrow.slick-next
+  transform rotate(-90deg)

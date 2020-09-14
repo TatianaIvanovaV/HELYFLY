@@ -15,7 +15,7 @@
             span.gallery__span.open-scr Показать все фото
             +picture('icons', 'arrow')
       .gallery__for-mobile
-        .gallery__carousel.car
+        .gallery__carousel
           - for (var i = 1; i <= 12; i++)
             .gallery__item--for-mob
               +pictureGallery(i)

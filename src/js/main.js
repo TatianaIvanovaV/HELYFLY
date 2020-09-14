@@ -25,11 +25,10 @@
 
 
 /*---  gallery-carousel --- */
-
 import $ from 'jquery'
 import 'slick-carousel'
 
-$('.car').slick({
+$('.gallery__carousel').slick({
   dots: false,
   infinite: false,
   speed: 300,
@@ -46,7 +45,28 @@ $('.car').slick({
   ]
 });
 
-
+/*---  map-carousel --- */
+$('.yandexmap-popup__carousel').slick({
+    dots: true,
+    arrows: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 300,
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: "unslick"
+      },
+      {
+        breakpoint: 0,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+});
 /*---  read-more --- */
   $('.autor-about__span').click(function(){
     $(this).siblings().slideToggle(300); 
