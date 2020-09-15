@@ -1,8 +1,7 @@
 
-
 .reviews
   .container
-    h3.reviews__h4 Отзывы:
+    h3.reviews__h4 Отзывы<span class="d-none">:</span>
     ul.reviews__list
       each elem in customerInfo
         li.reviews__item
@@ -15,15 +14,12 @@
               .customer__rate
                 .customer__stars-group
                   +picture('icons', 'stars-group')
-                .customer__summary
-                  +picture('icons', 'checkbox')
-                p.customer__opinion 
-                  if elem.gender == "female"
-                    p.customer__opinion= "Супер! Я бы заказала съемку снова!"
-                  else if elem.gender == "male"
-                    p.customer__opinion= "Супер! Я бы заказал съемку снова!"
-                  else
-                    p.customer__opinion= "Супер! Закажу съемку снова!"
+                if elem.gender == "female"
+                  p.customer__opinion= "Супер! Я бы заказала съемку снова!"
+                else if elem.gender == "male"
+                  p.customer__opinion= "Супер! Я бы заказал съемку снова!"
+                else
+                  p.customer__opinion= "Супер! Закажу съемку снова!"
               .customer__review
                 p.customer__p #{elem.review}
                 p.customer__date #{elem.date}   
