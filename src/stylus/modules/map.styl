@@ -17,21 +17,27 @@
       padding 51px 0 58px 30px
       +below(768px)
         width 300px
+        height 380px
       +below(576px)
         position relative
+        padding 51px 0 0
         top 52px
         left 8px
       +below(320px)
-        width 274px
-        height 380px
+        width 94.5%
+        height 100%
     &__list,
     &__list-autor
       display flex
       margin-bottom 35px
     &__list
       +below(576px)
-        vertical-align middle
-        background lightgreen
+        padding-left 10px
+        margin-bottom 24px
+    &__list-autor
+      +below(576px)
+        padding 13px 0 0 30px
+        margin-bottom 12px
     &__num
       font-weight bold
       font-size 35px
@@ -43,19 +49,38 @@
       height 61px
       width 61px
       padding-top 5px
+      +below(576px)
+        height 66px
+        width 66px 
+        margin 0 auto
+        font-size 30px
+        line-height 44px
+        padding-top 12px
     &__discr
       display flex 
       flex-direction column
       margin-left 18px
       padding-top 2px
+      +below(576px)
+        margin-left 0px
+        padding-top 18px
     &__title
       font-weight 500
       font-size 18px
       line-height 27px
       margin-bottom 5px
+      +below(576px)
+        font-size 16px
+        line-height 23px
+        margin-bottom 5px
+        text-align center
     &__text
       font-size 18px
       line-height 26px
+      +below(576px)
+        font-size 14px
+        line-height 20px
+        text-align center
 .photographer
   &__avatar
     width 67px
@@ -65,28 +90,48 @@
       width 67px
       height auto  
   &__discr
-    padding 5px 0 0 10px
+    padding 5px 0 0 10px  
   &__name 
     font-weight 500
     font-size 18px
     line-height 22px
+    +below(576px)
+      font-size 16px
+      line-height 20px
   &__rang
     margin-top 3px
     font-size 16px
     line-height 24px
+    +below(576px)
+      font-size 14px
+      line-height 21px
   &__info
     font-weight 500
     font-size 14px
     line-height 21px
     color blue
     cursor pointer
+    +below(576px)
+      margin 3px 0 0px 
     &:hover
       text-decoration underline
 .modal__show 
   display block
-.slick-arrow 
-  background url('/assets/img/icons/arrow.png')no-repeat 
-.slick-arrow.slick-prev 
-  transform rotate(90deg)
-.slick-arrow.slick-next
-  transform rotate(-90deg)
+.slick-arrow
+  position absolute
+  &.slick-prev
+  &.slick-next
+    top 38px
+    width auto
+  &.slick-prev
+    left 23px
+  &.slick-next
+    right 14px
+.slick-dots li
+  padding-left 10px
+  & img:nth-child(1)
+  &.slick-active img:nth-child(2)
+    display block
+  & img:nth-child(2) 
+  &.slick-active img:nth-child(1)
+      display none
