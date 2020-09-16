@@ -1,7 +1,7 @@
 .reviews
   padding-top 130px
   +below(320px)
-    padding-top 38px
+    padding-top 36px
   &__h4
     font-weight 500
     font-size 20px
@@ -25,11 +25,19 @@
     line-height 25px
     display flex
     justify-content center
-    padding 8px 0
+    padding 6px 0
   &__inner
     margin-right 12px
-    >img.upp 
-      transform rotate(180deg)
+    +below(320px)
+      margin-right 0px
+    >img
+      +below(320px)
+        &:first-of-type
+          display none
+        &:last-of-type
+          transform rotate(-90deg)
+      &.upp 
+        transform rotate(180deg)
 .customer
   display flex
   margin-bottom 30px
@@ -40,38 +48,57 @@
   &__avatar img
     +below(320px)
       width 84px
-      height 84px
+      height 84px 
+      float left
   &__main
     margin 10px 0 0 20px
     max-width 510px
     border-bottom 0.5px solid light-grey
     +below(320px)
-      margin 0
-      width 100%
+      margin 5px 0 0
+      width 100% 
+  &__for-mob-group
+    +below(320px)
+      display inline-block
+      margin-left 19px
   &__name
     font-weight 500
     font-size 18px
     line-height 22px
-    padding-bottom 9px
-  &__rate
-    display flex
-    margin-top 10px
+    margin-bottom 7px
     +below(320px)
-      flex-direction column
+      font-size 16px
+      line-height 20px
+      margin-bottom 3px
   &__stars-group
-    margin-right 50px
-  &__summary
-    margin-right 3px
+    margin 12px 52px 0 0
+    float left
+    +below(320px)
+      float none
+      margin 8px 0 0
   &__opinion
     color light-grey
+    padding-top 10px
+    +below(320px)
+      padding 20px 0 0 4px
     &::before
       content url('/assets/img/icons/checkbox.png')
+      position relative
+      top 1px
+      right 4px
   &__review
     margin-top 20px
     font-size 16px
     line-height 24px
+    +below(320px)
+      font-size 14px
+      line-height 21px
+      margin-top 15px
   &__date
     font-size 14px
     line-height 21px
     color light-grey
-    padding 13px 0 27px
+    margin 13px 0 30px
+    +below(320px)
+      padding 0
+      margin 37px 0 40px

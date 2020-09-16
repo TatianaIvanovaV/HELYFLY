@@ -34,7 +34,7 @@
       padding 16px 0 15px
   &__time
     border-top 1px solid light-grey
-    padding 10px 30px 15px 30px
+    padding 10px 30px 16px 30px
     display flex
     justify-content space-between
     +below(320px)
@@ -60,24 +60,23 @@
     width 129px
     height 50px  
     text-align center 
-    margin auto 0
+    margin 30px 0 0
+    +below(320px)
+      margin 0
     &:hover
       background orange
       color white
       transition all 0.5s
       cursor pointer
   &__rating
-    padding 23px 0 20px 27px
+    padding 23px 0 16px 27px
     +below(320px)
       border-top 0.5px solid light-grey
       padding 20px 0 12px 18px
-.reserve__rating .many-reviews__span
-  +below(320px)
-    font-size 13px
-    line-height 19px
-.reserve__rating .cup-img
-  +below(320px)
-    padding-top 8px
-.reserve__rating .many-reviews__inner
-  +below(320px)
-    margin-left 16px
+      & .many-reviews__span
+        font-size 13px
+        line-height 19px
+      & .cup-img
+        padding-top 8px
+      & .many-reviews__inner
+        margin-left 16px
