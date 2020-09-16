@@ -3,23 +3,29 @@
   height 840px
   width 100%
   color white
-  +below(320px)
+  +below(576px)
     height 655px
   &__title
     padding-top 286px
-    +below(320px)
+    +below(576px)
       padding-top 142px
   &__h1
     font-size 40px
     line-height 49px
+    +below(576px)
+      font-size 36px
+      line-height 44px  
     +below(320px)
       font-size 32px
       line-height 39px
       padding-right 15px
+    >br
+      +below(935px)
+        display none  
   &__span 
     color orange
   &__bubble
-    margin 20px 0 22px
+    margin 22px 0
     background orange 
     border-radius 4px
     width 224px
@@ -93,10 +99,12 @@
   font-weight 900
   font-size 18px
   text-align center
-  +below(320px)
+  +below(576px)
     width 275px
     font-size 16px
     padding-bottom 3px
+  +below(320px)
+    width 100%
   &:hover
     cursor pointer
     color orange

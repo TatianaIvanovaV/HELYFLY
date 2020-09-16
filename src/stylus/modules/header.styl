@@ -5,7 +5,7 @@
     flex-wrap wrap
     align-items center 
     height 100px 
-    +below(320px)
+    +below(576px)
         justify-content space-between
         height 60px
     &__logo
@@ -19,6 +19,8 @@
             font-size 22px
     &__tel
         padding-left 37px
+        +below(576px)
+            padding-left 0
         +below(320px)
             display none
     &__location
