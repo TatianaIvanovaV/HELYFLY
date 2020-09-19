@@ -1,10 +1,11 @@
 .popup
-  position relative
-  +below(320px)
-    display none
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%
   &__overlay
     position fixed
-    display none
     top 0
     left 0
     width 100%
@@ -14,77 +15,124 @@
     &.active
       display block
   &__window
-    display none
-    position absolute
-    top 231px 
-    left 27%
+    position relative
+    margin 231px auto 0
     max-width 615px
     height 887px
     background white
     border-radius 6px
     padding 22px 22px
     z-index 12
+    +below(768px)
+      margin 231px 10%
+    +below(576px) 
+      max-width 290px
+      height 946px
+      padding 17px 10px 0 
+      margin 231px auto 0
+    +below(320px)
+      margin 0 15px
     &.active
       display block
   &__close
     display flex
     justify-content flex-end
+    +below(576px)
+      margin-right 6px
     &-button
       cursor pointer
       width 20px
       height 20px
+      +below(576px)
+        width 17px
+        height 17px  
+      >img 
+        width 100%
+        height auto    
   &__h3
     font-weight 600
     font-size 22px
     line-height 33px
     text-align center
     margin 17px 0 26px
+    +below(576px)
+      font-size 18px
+      line-height 30px
+      margin 13px 0 30px
   &__form
     padding 0 75px
+    +below(576px)
+      padding 0 
   &__title
     margin 10px 0
     font-weight 500
     font-size 16px
     line-height 20px
+    +below(576px)
+      margin 0
   &__span
     color red
   &__input
-    width 420px
+    width 100%
     height 44px
     border 1px solid light-grey
     border-radius 3px
     padding 0 14px 0 20px 
+    +below(576px)
+      width 100%
+      padding 0 11px 0 18px
+      margin-top 10px
     &-card-num
       border-bottom transparent
       margin-bottom 0
       border-radius 3px 3px 0 0
-    &-validity, &-cvv
-      padding 0 20px
+      +below(576px)
+        margin-top 12px
+        height 46.5px
+    &-validity
+    &-cvv
+      padding-left 20px
       border 1px solid light-grey
       height 44px
-      width 210px  
     &-validity
+      width 50%
       float left
-      border-radius 0 0 0 3px 
+      border-radius 0 0 0 3px
+      +below(576px)
+        width 100%
+        float none
+        height 48.5px
+        border-radius 0
+        border-bottom transparent
     &-cvv
+      width 50% 
       border-radius 0 0 3px 0
       border-left transparent 
-  &__label-agree
+      +below(576px)
+        width 100%
+        height 48px
+        border-radius 0 0 3px 3px
+        border 1px solid light-grey
+  &__label-agree  
+    position relative
     display flex
     margin 36px 0 0 2px
+    +below(576px)
+      margin 23px 0 0
   &__check-orange 
-    position relative
-    top 0 
+    position absolute
+    top 2px
     width 16px
     height 16px
     background-color orange    
-    border-radius 2px  
-    margin-right 10px   
-  &__p
+    border-radius 2px 
+  &__parag-agree
     font-size 16px
-    line-height 20px 
+    line-height 20px
+    margin-left 26px  
   &__submit
-    width 390px
+    width 100%
+    max-width 390px
     height 72px
     font-family Montserrat
     font-weight 600
@@ -96,6 +144,17 @@
     color white
     margin 21px 15px 0px
     padding-top 5px
+    +below(768px)
+      width 100%
+      margin 21px 0 0px
+    +below(576px)
+      max-width 250px
+      margin 22px 10px 0
+      padding-top 0
+      height 50px
+      font-weight normal
+      font-size 14px
+      line-height 17px
     &:hover
       cursor pointer
     &:active 
@@ -107,16 +166,29 @@
     &:focus 
       outline none
 input
-  &[type="checkbox"]
-    display none   
+  +below(576px)
+    &[type="date"]
+      margin-bottom 14px
+    &[type="email"]
+      margin-bottom 12px
+    &[name="person-name"]
+      margin-bottom 17px
+    &[name="person-surname"]
+    &[name="person-tel"]
+        margin-bottom 20px
+  &[type="checkbox"]   
+    display none
     &:checked + .popup__check-orange
       box-shadow 0px 0px 3px rgba(252, 155, 9, 0.6)
       &:before
         content url("/assets/img/icons/checkbox-m.png")
         position absolute
-        top -5px
+        top 0
         left 3px
+        +below(320px)
+          top 0
   &[type="date"]
+    background none
     &::-webkit-calendar-picker-indicator 
       color rgba(0, 0, 0, 0)
       opacity 1
