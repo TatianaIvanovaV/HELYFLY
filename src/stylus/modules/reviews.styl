@@ -11,7 +11,7 @@
       line-height 42px
       text-align center
   &__list
-    margin-top 45px
+    margin-top 46px
   &__item:nth-child
     +above(320px)
       &(n+4)
@@ -39,46 +39,47 @@
       &.upp 
         transform rotate(180deg)
 .customer
-  display flex
   margin-bottom 30px
   +below(576px)
     width 100%
-    display inline-block
+    position relative
   &__avatar 
+    display inline-block
+    vertical-align top
   &__avatar img
     +below(576px)
       width 84px
       height 84px 
-      float left
   &__main
-    margin 10px 0 0 20px
+    display inline-block
+    margin 10px 0 0 16px
     max-width 510px
     border-bottom 0.5px solid light-grey
     +below(576px)
       margin 5px 0 0
-      width 100% 
   &__for-mob-group
     +below(576px)
-      display inline-block
-      margin-left 19px
+      position absolute
+      top 4px 
+      left 104px
   &__name
     font-weight 500
     font-size 18px
     line-height 22px
-    margin-bottom 9px
+    margin-bottom 12px
     +below(576px)
       font-size 16px
       line-height 20px
-      margin-bottom 3px
+      margin-bottom 8px
   &__stars-group
-    margin 12px 52px 0 0
+    margin 16px 52px 0 0
     float left
     +below(576px)
       float none
-      margin 8px 0 0
+      margin 14px 0 0
   &__opinion
     color light-grey
-    padding-top 10px
+    padding-top 16px
     +below(576px)
       padding 20px 0 0 4px
     &::before
@@ -87,7 +88,7 @@
       top 1px
       right 4px
   &__review
-    margin-top 20px
+    margin-top 25px
     font-size 16px
     line-height 24px
     +below(576px)
@@ -98,7 +99,7 @@
     font-size 14px
     line-height 21px
     color light-grey
-    margin 13px 0 30px
+    margin 15px 0 30px
     +below(576px)
       padding 0
       margin 37px 0 40px

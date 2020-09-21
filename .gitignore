@@ -1,4 +1,2 @@
 /node_modules
 /dist
-/src/pug/includes/test.pug
-/src/stylus/modules/test.styl

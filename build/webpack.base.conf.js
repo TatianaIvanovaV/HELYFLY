@@ -47,25 +47,34 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/,
-                use: [ // у плагинов особенность в подключении
+                 test: /\.styl$/, 
+                 use: [
                     'style-loader',
                     MiniCssExtractPlugin.loader,
-                    "css-loader",
                     {
+                        loader: 'css-loader',
+                        options: { sourceMap: true }
+                      },{
                         loader: 'postcss-loader',
-                        options: {
-                            sourceMap: true,
-                            config: {
-                                path: `./postcss.config.js`
-                            }
-                        }
+                        options: { sourceMap: true, config: { path: `./postcss.config.js` } }
+                      },
+                    {
+                        loader: 'stylus-loader',
+                        options: { sourceMap: true }
                     }
-                ]
-            },
-            {
-                 test: /\.styl$/, 
-                 loader: 'style-loader!css-loader!stylus-loader' 
+
+                  ]
+            },{
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    MiniCssExtractPlugin.loader,
+                    {
+                      loader: 'css-loader',
+                      options: { sourceMap: true }
+                    }
+
+                  ]
             },
             {
                 test: /\.pug$/,
@@ -77,11 +86,11 @@ module.exports = {
                
         ]
     },
-    plugins: [  // массив для подключения плагинов
+    plugins: [ 
             new MiniCssExtractPlugin({
                 filename: `${PATHS.assets}css/[name].css`
             }),
-            new CopyWebpackPlugin([ // для каждого каталога с целью копирования создается свой объект (откуда - куда)
+            new CopyWebpackPlugin([
                 {
                     from: `${PATHS.source}/img`,
                     to: `${PATHS.assets}img`
@@ -92,12 +101,12 @@ module.exports = {
                 },
                 {
                     from: `${PATHS.source}/static`,
-                    to: ''
+                    to: 'static'
                 }
             ]),
             new HtmlWebpackPlugin({
                 hash: false,
                 template: `${PATHS.source}/pug/pages/index.pug`,
             }),
-        ],
+        ]
 }
