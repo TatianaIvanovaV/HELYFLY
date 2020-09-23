@@ -1,15 +1,15 @@
 module.exports = {
   plugins: [
-    require('autoprefixer'),
-    require('css-mqpacker'),
-    require('cssnano')({
-      preset: [
-        'default', {
-          discardComments: {
-            removeAll: true
-          }
-        }
-      ]
-    })
+      require('autoprefixer'),    // добавляем вендорные префиксы для кросс-браузерности
+      require('css-mqpacker'),    // склеиваем все медиа-файлы в один
+      require('cssnano')({    // минифицируем css файлы
+          preset: [
+              'default', {
+                  discardComments: {
+                      removeAll: true,
+                  }
+              }
+          ]
+      })
   ]
 }

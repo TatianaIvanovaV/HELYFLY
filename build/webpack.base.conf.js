@@ -9,7 +9,7 @@ const PATHS = { // объект PATHS для более удобного обр�
 }
 
 module.exports = {
-    externals: {    // здесь мы публикуем константу PATHS, чтобы не пришлось копировать её в build, dev
+    externals: {
         paths: PATHS
     },
     entry: {    // app == [name] - ярлык точки входа
@@ -17,7 +17,7 @@ module.exports = {
     },
     output: {
         // filename: '[name].js', //[name] == ярлыку из entry, т.е. каждой точке входа будет соответствовать свой файл
-        filename: `${PATHS.assets}js/[name].js`, // используя синтаксис ES6, определяем новый путь для названия результирующего файла
+        filename: `${PATHS.assets}js/[name].[hash].js`, // используя синтаксис ES6, определяем новый путь для названия результирующего файла
         path: PATHS.dist,    // указываем каталог для создания output
         publicPath: '/' // каталог для webpack-dev-server, где он ищет index.html
     },
@@ -27,68 +27,65 @@ module.exports = {
                 test: /\.js$/,  // регулярка для всех js-файлов
                 loader: 'babel-loader', // обработчик 'babel-loader' для всех файлов из регулярки в test
                 exclude: '/node_modules/'   // исключить папку node_modules из ока лоадера
-            },
+            },{
+                test: /\.pug$/,
+                loader: 'pug-loader',
+                options: { pretty: true }
+             },
             {
                 test: /\.(png|jpe?g|gif|svg)$/,
                 loader: 'file-loader',
                 options: {
-                    name: '[name].[ext]',
-                    outputPath: "img",
-                    publicPath: "img"
+                    name: '[name].[ext]'
                 }
             },
             {
                 test: /\.(woff(2)?|ttf|eot|svg|otf)(\?v=\d+\.\d+\.\d+)?$/,
                 loader: "file-loader",
                 options: {
-                    name: "[name].[ext]",
-                    outputPath: "fonts",
-                    publicPath: "fonts"
+                    name: "[name].[ext]"
                 }
             },
             {
-                 test: /\.styl$/, 
-                 use: [
-                    'style-loader',
-                    MiniCssExtractPlugin.loader,
-                    {
-                        loader: 'css-loader',
-                        options: { sourceMap: true }
-                      },{
-                        loader: 'postcss-loader',
-                        options: { sourceMap: true, config: { path: `./postcss.config.js` } }
-                      },
-                    {
-                        loader: 'stylus-loader',
-                        options: { sourceMap: true }
-                    }
-
-                  ]
-            },{
-                test: /\.css$/,
+                test: /\.styl$/, 
                 use: [
-                    'style-loader',
-                    MiniCssExtractPlugin.loader,
-                    {
-                      loader: 'css-loader',
-                      options: { sourceMap: true }
-                    }
+                   'style-loader',
+                   MiniCssExtractPlugin.loader,
+                   {
+                    loader: 'css-loader',
+                    options: { sourceMap: true }
+                    },
+                   {
+                    loader: 'postcss-loader',
+                    options: { sourceMap: true, config: { path: `./postcss.config.js` }  }
+                    },
+                   {
+                       loader: 'stylus-loader',
+                       options: { sourceMap: true }
+                   }
 
-                  ]
-            },
-            {
-                test: /\.pug$/,
-                loader: 'pug-loader',
-                options: {
-                pretty: true
-                }
-                }
-               
+                 ]
+           },{
+               test: /\.css$/,
+               use: [
+                   'style-loader',
+                   MiniCssExtractPlugin.loader,
+                   {
+                    loader: 'css-loader',
+                    options: { sourceMap: true }
+                    },
+                   {
+                    loader: 'postcss-loader',
+                    options: { sourceMap: true, config: { path: `./postcss.config.js` }  }
+                  }
+                 ]
+           },
+           
         ]
     },
     plugins: [ 
             new MiniCssExtractPlugin({
-                filename: `${PATHS.assets}css/[name].css`
+                filename: `${PATHS.assets}css/[name].[hash].css`,
             }),
             new CopyWebpackPlugin([
                 {
@@ -107,6 +104,6 @@ module.exports = {
             new HtmlWebpackPlugin({
                 hash: false,
                 template: `${PATHS.source}/pug/pages/index.pug`,
-            }),
+            })
         ]
 }
