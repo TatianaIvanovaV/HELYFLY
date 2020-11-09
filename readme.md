@@ -1,25 +1,3 @@
 макет https://www.figma.com/file/fMyOAiBkWJ4LtAacwdmIyB/testTask?node-id=0%3A1
 т.з. https://github.com/fugr-ru/frontend-html-3
 
-/* "@babel/core": "^7.11.6",
-    "@babel/preset-env": "^7.11.5",
-    "autoprefixer": "^9.8.6",
-    "babel-loader": "^8.0.6",
-    "copy-webpack-plugin": "^5.1.2",
-    "css-loader": "^3.2.0",
-    "css-mqpacker": "^7.0.0",
-    "cssnano": "^4.1.10",
-    "file-loader": "^4.2.0",
-    "html-webpack-plugin": "^3.2.0",
-    "mini-css-extract-plugin": "^0.8.0",
-    "path": "^0.12.7",
-    "postcss-loader": "^3.0.0",
-    "pug": "^2.0.4",
-    "pug-loader": "^2.4.0",
-    "style-loader": "^1.0.0",
-    "stylus": "^0.54.8",
-    "stylus-loader": "^3.0.2",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.8",
-    "webpack-dev-server": "^3.8.0",
-    "webpack-merge": "^4.2.2"*/

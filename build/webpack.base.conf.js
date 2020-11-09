@@ -96,14 +96,15 @@ module.exports = {
                     from: `${PATHS.source}/fonts`,
                     to: `${PATHS.assets}fonts`
                 },
-                {
-                    from: `${PATHS.source}/static`,
-                    to: 'static'
-                }
+                { 
+                    from: `${PATHS.source}/favicons`,
+                     to: `${PATHS.assets}favicons` 
+                },
             ]),
             new HtmlWebpackPlugin({
                 hash: false,
                 template: `${PATHS.source}/pug/pages/index.pug`,
+                favicon: `${PATHS.source}/favicons/favicon.ico`
             })
         ]
 }
