@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>HELYFLY фотосессия на вертолете</title>
+    <meta name="description" content="фотосессия в вертолете, HELYFLY">
+    <meta name="keywords" content="фотосессия, полет на вертолете, HELYFLY">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ab25fe1d-87cb-4946-b30e-4fec31d2a9b0&amp;lang=ru_RU" type="text/javascript"></script>
+  <link rel="shortcut icon" href="/favicon.ico"><link href="/assets/css/app.19bb3715d5bc28fa3b4d.css" rel="stylesheet"></head>
+  <body>
+    <div class="popup">
+      <div class="popup__overlay"></div>
+      <div class="popup__window">
+        <div class="popup__close"><span class="popup__close-button"><img class="close-img" src="./assets/img/icons/close.png" alt="close"></span></div>
+        <h3 class="popup__h3">Бронирование</h3>
+        <form class="popup__form" action="" method="">
+          <label class="popup__label">
+            <div class="popup__title">Дата<span class="popup__span">*</span></div>
+            <input class="popup__input" placeholder="" type="date" name="person-date" required>
+          </label>
+          <label class="popup__label">
+            <div class="popup__title">Email<span class="popup__span">*</span></div>
+            <input class="popup__input" placeholder="Электронная почта" type="email" name="person-email" required>
+          </label>
+          <label class="popup__label">
+            <div class="popup__title">Имя<span class="popup__span">*</span></div>
+            <input class="popup__input" placeholder="" type="text" name="person-name" required>
+          </label>
+          <label class="popup__label">
+            <div class="popup__title">Фамилия<span class="popup__span">*</span></div>
+            <input class="popup__input" placeholder="" type="text" name="person-surname" required>
+          </label>
+          <label class="popup__label">
+            <div class="popup__title">Телефон<span class="popup__span">*</span></div>
+            <input class="popup__input" placeholder="+7 (905) 184-81-40" type="tel" name="person-tel" required>
+          </label>
+          <label class="popup__label">
+            <div class="popup__title">Данные карты<span class="popup__span">*</span></div>
+            <input class="popup__input popup__input-card-num" type="tel" placeholder="Номер карты" name="card-number" required>
+            <input class="popup__input-validity" type="tel" placeholder="Срок действия" name="exp-date" required>
+            <input class="popup__input-cvv" type="password" placeholder="CVV" maxlength="3" required>
+          </label>
+          <label class="popup__label-agree">
+            <input class="popup__check" type="checkbox" name="agree" required><span class="popup__check-orange"></span>
+            <p class="popup__parag-agree">Я согласен с пользовательским <br class="d-none">соглашением и публичной офертой</p>
+          </label>
+          <input class="popup__submit" type="submit" value="Забронировать">
+        </form>
+      </div>
+    </div>
+    <header class="header">
+      <div class="container">
+        <div class="header-inner"><a class="header-inner__logo" href="#">HELYFLY </a>
+          <div class="header-inner__tel"><a class="tel__link" href="tel:+78001231212"><span class="span-grey">Телефон:</span>8(800)-123-12-12      </a></div>
+          <div class="header-inner__location">Москва</div>
+          <div class="header-inner__autorization"><img class="autorization-img" src="./assets/img/icons/autorization.png" alt="autorization">
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main-content">
+<div class="helimain">
+  <div class="container">
+    <div class="helimain__title">
+      <h1 class="helimain__h1">Эксклюзивная <span class="helimain__span">фотосессия</span> при полете <br>на вертолете</h1>
+      <div class="helimain__bubble">
+        <div class="helimain__bubble-inner">
+          <div class="helimain__bubble-coast">Стоимость:</div>
+          <div class="helimain__bubble-sum">1500₽</div>
+        </div>
+        <div class="helimain__bubble-persent">%</div>
+      </div>
+      <div class="helimain__button">
+        <button class="booking-button">Забронировать место</button>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="about">
+        <div class="container">
+          <div class="offer">
+            <div class="offer-discription">
+              <div class="offer-discription__title">
+                <h2 class="offer-discription__h2">Фотосессия<br> в вертолете</h2>
+                <p class="offer-discription__p">Полет на вертолете это прекрасная возможность получить новые ощущения! А наш замечательный фотограф запечатлит лучшие моменты!</p>
+                <div class="offer-discription__list">
+                  <ul></ul>
+                  <li class="offer-discription__item"><img class="clock-img" src="./assets/img/icons/clock.png" alt="clock"><span>3 часа съемки</span>
+                  </li>
+                  <li class="offer-discription__item"><img class="photocamera-img" src="./assets/img/icons/photocamera.png" alt="photocamera"><span>Более 50 фотографий</span>
+                  </li>
+                  <li class="offer-discription__item"><img class="local-img" src="./assets/img/icons/local.png" alt="local"><span>Москва</span>
+                  </li>
+                  <li class="offer-discription__item"><img class="chat-img" src="./assets/img/icons/chat.png" alt="chat"><span>Готовы ответить на любые вопросы</span>
+                  </li>
+                </div>
+                <div class="offer-discription__list--mob">
+                  <ul></ul>
+                  <li class="offer-discription__item"><img class="clock-for-mob-img" src="./assets/img/icons/clock-for-mob.png" alt="clock-for-mob"><span>3 часа съемки</span>
+                  </li>
+                  <li class="offer-discription__item"><img class="chat-img" src="./assets/img/icons/chat.png" alt="chat"><span>Русский</span>
+                  </li>
+                  <li class="offer-discription__item"><img class="money-for-mob-img" src="./assets/img/icons/money-for-mob.png" alt="money-for-mob"><span>от 850$</span>
+                  </li>
+                  <li class="offer-discription__item"><img class="local-for-mob-img" src="./assets/img/icons/local-for-mob.png" alt="local-for-mob"><span>Дубаи</span>
+                  </li>
+                  <li class="offer-discription__item"><img class="photocamera-img" src="./assets/img/icons/photocamera.png" alt="photocamera"><span>Более 50 фотографий</span>
+                  </li>
+                </div>
+              </div>
+              <div class="offer-discription__rating">
+                <div class="many-reviews"><img class="cup-img" src="./assets/img/icons/cup.png" alt="cup">
+                  <div class="many-reviews__inner"><span class="many-reviews__span">Более <b>50</b> отзывов с оценкой </span><img class="stars-group-img" src="./assets/img/icons/stars-group.png" alt="stars-group">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="offer-video">
+              <div class="offer-video__preview" id="play-video"><img class="preview-img" src="./assets/img/main/preview.png" alt="preview"><img class="play-icon-img" src="./assets/img/icons/play-icon.png" alt="play-icon">
+              </div>
+              <div class="offer-video__wrap">
+                <iframe class="offer-video__iframe" id="video" width="552" height="372" src="//www.youtube.com/embed/9B7te184ZpQ?rel=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+            <h2 class="offer-discription__h2--mob">Фотосессия<br> в вертолете</h2>
+          </div>
+        </div>
+      </div>
+      <div class="gallery">
+        <div class="container">
+          <div class="gallery__content">
+            <h3 class="gallery__h3">Фотографии пакета<span class="d-none">:</span></h3>
+            <div class="gallery__for-desk">
+              <div class="gallery__group">
+                <div class="gallery__item"><img class="gallery__img img-gallery1" src="./assets/img/gallery/pic1.png" alt="fotoGallery1">
+                </div>
+                <div class="gallery__item"><img class="gallery__img img-gallery2" src="./assets/img/gallery/pic2.png" alt="fotoGallery2">
+                </div>
+                <div class="gallery__item"><img class="gallery__img img-gallery3" src="./assets/img/gallery/pic3.png" alt="fotoGallery3">
+                </div>
+                <div class="gallery__item"><img class="gallery__img img-gallery4" src="./assets/img/gallery/pic4.png" alt="fotoGallery4">
+                </div>
+                <div class="gallery__item"><img class="gallery__img img-gallery5" src="./assets/img/gallery/pic5.png" alt="fotoGallery5">
+                </div>
+                <div class="gallery__item"><img class="gallery__img img-gallery6" src="./assets/img/gallery/pic6.png" alt="fotoGallery6">
+                </div>
+                <div class="gallery__item"><img class="gallery__img img-gallery7" src="./assets/img/gallery/pic7.png" alt="fotoGallery7">
+                </div>
+                <div class="gallery__item"><img class="gallery__img img-gallery8" src="./assets/img/gallery/pic8.png" alt="fotoGallery8">
+                </div>
+                <div class="gallery__item"><img class="gallery__img img-gallery9" src="./assets/img/gallery/pic9.png" alt="fotoGallery9">
+                </div>
+                <div class="gallery__item"><img class="gallery__img img-gallery10" src="./assets/img/gallery/pic10.png" alt="fotoGallery10">
+                </div>
+                <div class="gallery__item"><img class="gallery__img img-gallery11" src="./assets/img/gallery/pic11.png" alt="fotoGallery11">
+                </div>
+                <div class="gallery__item"><img class="gallery__img img-gallery12" src="./assets/img/gallery/pic12.png" alt="fotoGallery12">
+                </div>
+              </div>
+              <div class="gallery__show">
+                <div class="gallery__show-more-inner"><img class="arrow-img" src="./assets/img/icons/arrow.png" alt="arrow"><span class="gallery__span open-scr">Показать все фото</span><img class="arrow-img" src="./assets/img/icons/arrow.png" alt="arrow">
+                </div>
+              </div>
+            </div>
+            <div class="gallery__for-mobile">
+              <div class="gallery__carousel">
+                <div class="gallery__item--for-mob"><img class="gallery__img img-gallery1" src="./assets/img/gallery/pic1.png" alt="fotoGallery1">
+                </div>
+                <div class="gallery__item--for-mob"><img class="gallery__img img-gallery2" src="./assets/img/gallery/pic2.png" alt="fotoGallery2">
+                </div>
+                <div class="gallery__item--for-mob"><img class="gallery__img img-gallery3" src="./assets/img/gallery/pic3.png" alt="fotoGallery3">
+                </div>
+                <div class="gallery__item--for-mob"><img class="gallery__img img-gallery4" src="./assets/img/gallery/pic4.png" alt="fotoGallery4">
+                </div>
+                <div class="gallery__item--for-mob"><img class="gallery__img img-gallery5" src="./assets/img/gallery/pic5.png" alt="fotoGallery5">
+                </div>
+                <div class="gallery__item--for-mob"><img class="gallery__img img-gallery6" src="./assets/img/gallery/pic6.png" alt="fotoGallery6">
+                </div>
+                <div class="gallery__item--for-mob"><img class="gallery__img img-gallery7" src="./assets/img/gallery/pic7.png" alt="fotoGallery7">
+                </div>
+                <div class="gallery__item--for-mob"><img class="gallery__img img-gallery8" src="./assets/img/gallery/pic8.png" alt="fotoGallery8">
+                </div>
+                <div class="gallery__item--for-mob"><img class="gallery__img img-gallery9" src="./assets/img/gallery/pic9.png" alt="fotoGallery9">
+                </div>
+                <div class="gallery__item--for-mob"><img class="gallery__img img-gallery10" src="./assets/img/gallery/pic10.png" alt="fotoGallery10">
+                </div>
+                <div class="gallery__item--for-mob"><img class="gallery__img img-gallery11" src="./assets/img/gallery/pic11.png" alt="fotoGallery11">
+                </div>
+                <div class="gallery__item--for-mob"><img class="gallery__img img-gallery12" src="./assets/img/gallery/pic12.png" alt="fotoGallery12">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="autor">
+        <div class="container">
+          <div class="autor-about">
+            <div class="autor-about__content"> 
+              <h3 class="autor-about__h3">Об организаторе:</h3>
+              <div class="autor-about__read">
+                <p class="autor-about__p">Всем привет! Я фотограф Мария! И помимо фотосъемки я так же являюсь членом группы экспертов туристической отрасли, которые хорошо разбираются в маркетинге, операциях и услугах обслуживания клиентов, специализирующихся на совместном использовании и частных турах.</p><br> 
+                Сначала мы (я и моя команда) изучаем интересы клиентов, а затем придумываем подходящее решение, которое     соответствует бюджету и планам клиента. Мы никогда не зависим от субпоставщиков <br class="d-block">и не свяжемся…
+                <div class="autor-about__show-more"><span class="autor-about__span open-scr">Читать еще<img class="arrow-img" src="./assets/img/icons/arrow.png" alt="arrow"></span>
+                  <p class="autor-about__p--full">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+              </div>
+              <h3 class="autor-about__h3">Что я предоставлю:</h3>
+              <div class="autor-about__read">
+                <p class="autor-about__p">Встречу вас на машине после длительного перелёта. Качественный подбор места<br class="d-block"> и локации для вашей съемки.<br class="d-block"> При необходимости всегда возможно прерваться<br class="d-block"> на обед/ужин.<br class="d-block"> Более 50 фотографий на выходе <br class="d-block">с обработкой и замечательные <br class="d-block">впечатления о Дубае!</p>
+                <div class="autor-about__show-more"><span class="autor-about__span open-scr open-scr__autor">Читать еще<img class="arrow-img" src="./assets/img/icons/arrow.png" alt="arrow"></span>
+                  <p class="autor-about__p--full">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+              </div>
+            </div>
+            <div class="autor-about__avatar"><img class="like-img" src="./assets/img/icons/like.png" alt="like">
+              <div class="autor-avatar"><img class="autor-img" src="./assets/img/main/autor.png" alt="autor">
+                <p class="autor-avatar__name">Марина Иванова</p>
+                <p class="autor-avatar__range">Фотограф</p><span class="autor-avatar__span">Показать больше <br>информации о фотографе      </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reserve">
+        <div class="container">
+          <h3 class="reserve__h3">Доступная съемка <br>в ближайшее время<span class="d-none">:</span></h3>
+          <div class="reserve__container">
+            <div class="reserve__date"> 
+              <p class="reserve__p">Пятница, <span class="bold">14</span> сентября</p><img class="calendar1-img" src="./assets/img/icons/calendar1.png" alt="calendar1">
+            </div>
+            <div class="reserve__time">
+              <div class="reserve__timetable">
+                <p class="reserve__interval">15:00 - 18:00</p>
+                <p class="reserve__cost">1500₽</p>
+                <p class="reserve__places">Осталось — 1 место</p>
+              </div><a class="reserve__button" id="choose-button">Выбрать</a>
+            </div>
+            <div class="reserve__time">
+              <div class="reserve__timetable">
+                <p class="reserve__interval">19:00 - 22:00</p>
+                <p class="reserve__cost">1500₽</p>
+                <p class="reserve__places">Осталось — 1 место</p>
+              </div><a class="reserve__button" id="choose-button">Выбрать</a>
+            </div>
+            <div class="reserve__rating">
+              <div class="many-reviews"><img class="cup-img" src="./assets/img/icons/cup.png" alt="cup">
+                <div class="many-reviews__inner"><span class="many-reviews__span">Более <b>50</b> отзывов с оценкой </span><img class="stars-group-img" src="./assets/img/icons/stars-group.png" alt="stars-group">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="map">
+        <div class="yandexmap" id="map"></div>
+        <div class="container">
+          <div class="yandexmap-popup">
+            <div class="yandexmap-popup__content">
+              <div class="yandexmap-popup__carousel">
+                <div class="yandexmap-popup__list">
+                  <div class="yandexmap-popup__num">1</div>
+                  <div class="yandexmap-popup__discr">
+                    <p class="yandexmap-popup__title">Где встречаемся?</p>
+                    <p class="yandexmap-popup__text">Москва    </p>
+                  </div>
+                </div>
+                <div class="yandexmap-popup__list">
+                  <div class="yandexmap-popup__num">2</div>
+                  <div class="yandexmap-popup__discr">
+                    <p class="yandexmap-popup__title">Время съемки</p>
+                    <p class="yandexmap-popup__text">3 часа    </p>
+                  </div>
+                </div>
+                <div class="yandexmap-popup__list">
+                  <div class="yandexmap-popup__num">3</div>
+                  <div class="yandexmap-popup__discr">
+                    <p class="yandexmap-popup__title">Мест осталось:</p>
+                    <p class="yandexmap-popup__text">2 места    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="yandexmap-popup__list-autor photographer">
+                <div class="photographer__avatar"><img class="autor-img" src="./assets/img/main/autor.png" alt="autor">
+                </div>
+                <div class="photographer__discr">
+                  <p class="photographer__name">Мария Иванова</p>
+                  <p class="photographer__rang">Фотограф</p>
+                  <p class="photographer__info">Показать больше информации <span class="d-block">о фотографе</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews">
+        <div class="container">
+          <h3 class="reviews__h4">Отзывы<span class="d-none">:</span></h3>
+          <ul class="reviews__list">
+            <li class="reviews__item customer">
+              <div class="customer__avatar"><img class="customer__img img-user1" src="./assets/img/customers/user1.png" alt="customer1">
+              </div>
+              <div class="customer__main">
+                <div class="customer__for-mob-group">
+                  <div class="customer__name">Валерия Антонова</div>
+                  <div class="customer__rang">Арт-директор</div>
+                  <div class="customer__stars-group"><img class="stars-group-img" src="./assets/img/icons/stars-group.png" alt="stars-group">
+                  </div>
+                </div>
+                <div class="customer__opinion">Супер! Я бы заказала съемку снова!</div>
+                <div class="customer__review">
+                  <p class="customer__p">Хотим выразить огромную благодарность вашей компании! Получили море ощущений, все прошло просто замечательно. Фотки получились великолепные, отдельное спасибо фотографу!</p>
+                  <p class="customer__date">27 Апреля, 2019г.   </p>
+                </div>
+              </div>
+            </li>
+            <li class="reviews__item customer">
+              <div class="customer__avatar"><img class="customer__img img-user2" src="./assets/img/customers/user2.png" alt="customer2">
+              </div>
+              <div class="customer__main">
+                <div class="customer__for-mob-group">
+                  <div class="customer__name">Виталий Петров</div>
+                  <div class="customer__rang">Фотограф</div>
+                  <div class="customer__stars-group"><img class="stars-group-img" src="./assets/img/icons/stars-group.png" alt="stars-group">
+                  </div>
+                </div>
+                <div class="customer__opinion">Супер! Я бы заказал съемку снова!</div>
+                <div class="customer__review">
+                  <p class="customer__p">Восторг! :) Очень понравилось :) Захватили последний теплый, солнечный октябрьский день :) Впечатлило всё: сам вертолет, взлет, полёт, приземление. Организация полёта отличная. Спасибо!</p>
+                  <p class="customer__date">19 Апреля, 2019г.   </p>
+                </div>
+              </div>
+            </li>
+            <li class="reviews__item customer">
+              <div class="customer__avatar"><img class="customer__img img-user3" src="./assets/img/customers/user3.png" alt="customer3">
+              </div>
+              <div class="customer__main">
+                <div class="customer__for-mob-group">
+                  <div class="customer__name">Джим Керри</div>
+                  <div class="customer__rang"></div>
+                  <div class="customer__stars-group"><img class="stars-group-img" src="./assets/img/icons/stars-group.png" alt="stars-group">
+                  </div>
+                </div>
+                <div class="customer__opinion">Супер! Я бы заказал съемку снова!</div>
+                <div class="customer__review">
+                  <p class="customer__p">Круто-круто-круто!!! Отмечали мой ДэРэ. Отлично провели время!!! Кстати закуски были вкусными и сытными))Мы с собой ничего не брали. Сами много фоткались,поэтому воспоминания обалденные!!!)) А еще нам всем напечатали по сертификату воздухоплавателя, правда некоторые ленятся за ним съездить))) Но все равно приятно. Короче, Презентстар – проверено. Оценка: пять!</p>
+                  <p class="customer__date">11 Апреля, 2019г.   </p>
+                </div>
+              </div>
+            </li>
+            <li class="reviews__item customer">
+              <div class="customer__avatar"><img class="customer__img img-user4" src="./assets/img/customers/user4.png" alt="customer4">
+              </div>
+              <div class="customer__main">
+                <div class="customer__for-mob-group">
+                  <div class="customer__name">Валерия Антонова</div>
+                  <div class="customer__rang">Арт-директор</div>
+                  <div class="customer__stars-group"><img class="stars-group-img" src="./assets/img/icons/stars-group.png" alt="stars-group">
+                  </div>
+                </div>
+                <div class="customer__opinion">Супер! Я бы заказала съемку снова!</div>
+                <div class="customer__review">
+                  <p class="customer__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                  <p class="customer__date">27 Апреля, 2019г.   </p>
+                </div>
+              </div>
+            </li>
+            <li class="reviews__item customer">
+              <div class="customer__avatar"><img class="customer__img img-user5" src="./assets/img/customers/user5.png" alt="customer5">
+              </div>
+              <div class="customer__main">
+                <div class="customer__for-mob-group">
+                  <div class="customer__name">Виталий Петров</div>
+                  <div class="customer__rang">Фотограф</div>
+                  <div class="customer__stars-group"><img class="stars-group-img" src="./assets/img/icons/stars-group.png" alt="stars-group">
+                  </div>
+                </div>
+                <div class="customer__opinion">Супер! Я бы заказал съемку снова!</div>
+                <div class="customer__review">
+                  <p class="customer__p">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <p class="customer__date">19 Апреля, 2019г.   </p>
+                </div>
+              </div>
+            </li>
+            <li class="reviews__item customer">
+              <div class="customer__avatar"><img class="customer__img img-user6" src="./assets/img/customers/user6.png" alt="customer6">
+              </div>
+              <div class="customer__main">
+                <div class="customer__for-mob-group">
+                  <div class="customer__name">Джим Керри</div>
+                  <div class="customer__rang">Фотограф</div>
+                  <div class="customer__stars-group"><img class="stars-group-img" src="./assets/img/icons/stars-group.png" alt="stars-group">
+                  </div>
+                </div>
+                <div class="customer__opinion">Супер! Я бы заказал съемку снова!</div>
+                <div class="customer__review">
+                  <p class="customer__p">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p class="customer__date">11 Апреля, 2019г.   </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="reviews__show">
+            <div class="reviews__inner"><img class="arrow-img" src="./assets/img/icons/arrow.png" alt="arrow"><span class="reviews__span open-scr">Показать Все (6)</span><img class="arrow-img" src="./assets/img/icons/arrow.png" alt="arrow">
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-upper">
+        <div class="container">
+          <div class="footer-upper__main">
+            <div class="footer-upper__logo"><a class="footer-upper__a" href="#">HELYFLY</a></div>
+            <div class="footer-upper__links">
+              <nav class="footer-upper__social">
+                <ul class="footer-upper__list">
+                  <li class="footer-upper__item"><a class="footer-upper__a" href="#"><img class="vk-img" src="./assets/img/icons/vk.png" alt="vk"></a></li>
+                  <li class="footer-upper__item"><a class="footer-upper__a" href="#"><img class="fb-img" src="./assets/img/icons/fb.png" alt="fb"></a></li>
+                  <li class="footer-upper__item"><a class="footer-upper__a" href="#"><img class="insta-img" src="./assets/img/icons/insta.png" alt="insta"></a></li>
+                </ul>
+              </nav>
+              <div class="footer-upper__language">
+                <select class="footer-upper__select">
+                  <option class="footer-upper__option option--ru">RU </option>
+                  <option class="footer-upper__option option--en">EN </option>
+                </select>
+                <div class="footer-upper__dropdown"><img class="arrow-img" src="./assets/img/icons/arrow.png" alt="arrow">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-lower">
+        <div class="container">
+          <div class="footer-lower__main">
+            <div class="footer-lower__cards"><img class="master-img" src="./assets/img/icons/master.png" alt="master"><img class="visa-img" src="./assets/img/icons/visa.png" alt="visa"><img class="paypal-img" src="./assets/img/icons/paypal.png" alt="paypal">
+            </div>
+            <div class="footer-lower__copyright">
+              <p class="footer-lower__techapp">Тех. поддержка: <a class="footer-lower__tel" href="tel:+7800700-00-00">8(800)700-00-00</a></p>
+              <p class="footer-lower__right">© 2018 HELYFLY. All Rights Reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  <script type="text/javascript" src="/assets/js/app.19bb3715d5bc28fa3b4d.js"></script></body>
+</html>
