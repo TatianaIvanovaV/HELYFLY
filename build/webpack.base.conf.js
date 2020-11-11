@@ -17,7 +17,7 @@ module.exports = {
     },
     output: {
         // filename: '[name].js', //[name] == ярлыку из entry, т.е. каждой точке входа будет соответствовать свой файл
-        filename: `${PATHS.assets}js/[name].[hash].js`, // используя синтаксис ES6, определяем новый путь для названия результирующего файла
+        filename: `js/[name].[hash].js`, // используя синтаксис ES6, определяем новый путь для названия результирующего файла
         path: PATHS.dist,    // указываем каталог для создания output
         publicPath: '/' // каталог для webpack-dev-server, где он ищет index.html
     },
@@ -36,14 +36,16 @@ module.exports = {
                 test: /\.(png|jpe?g|gif|svg)$/,
                 loader: 'file-loader',
                 options: {
-                    name: '[name].[ext]'
+                    name: '[name].[ext]',
+                    outputPath: 'assets/img/'
                 }
             },
             {
                 test: /\.(woff(2)?|ttf|eot|svg|otf)(\?v=\d+\.\d+\.\d+)?$/,
                 loader: "file-loader",
                 options: {
-                    name: "[name].[ext]"
+                    name: "[name].[ext]",
+                    outputPath: 'assets/fonts/'
                 }
             },
             {
@@ -85,7 +87,7 @@ module.exports = {
     },
     plugins: [ 
             new MiniCssExtractPlugin({
-                filename: `${PATHS.assets}css/[name].[hash].css`,
+                filename: `[name].[hash].css`,
             }),
             new CopyWebpackPlugin([
                 {
@@ -98,13 +100,12 @@ module.exports = {
                 },
                 { 
                     from: `${PATHS.source}/favicons`,
-                     to: `${PATHS.assets}favicons` 
+                    to: `favicons` 
                 },
             ]),
             new HtmlWebpackPlugin({
                 hash: false,
-                template: `${PATHS.source}/pug/pages/index.pug`,
-                favicon: `${PATHS.source}/favicons/favicon.ico`
+                template: `${PATHS.source}/pug/pages/index.pug`
             })
         ]
 }
