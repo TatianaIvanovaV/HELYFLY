@@ -69,8 +69,8 @@ $('.yandexmap-popup__carousel').slick({
     customPaging : function(slider, i) {
       return '<a href="#"><img src="assets/img/icons/dot.png" /><img src="assets/img/icons/active-dot.png" /></a>';
   },
-    prevArrow:"<img class='a-left control-c prev slick-prev' src='assets/img/icons/Arrow-left.png'>",
-    nextArrow:"<img class='a-right control-c next slick-next' src='assets/img/icons/Arrow-right.png'>"
+    prevArrow:"<img class='a-left control-c prev slick-prev' src='assets/img/icons/arrow-left.png'>",
+    nextArrow:"<img class='a-right control-c next slick-next' src='assets/img/icons/arrow-right.png'>"
 });
 /*---  read-more --- */
   $('.autor-about__span').click(function(){
