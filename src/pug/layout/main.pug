@@ -6,14 +6,14 @@ html(lang="ru")
   head
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
     title HELYFLY фотосессия на вертолете
     meta(name="description" content="фотосессия в вертолете, HELYFLY")
     meta(name="keywords" content="фотосессия, полет на вертолете, HELYFLY")
     link(rel="shortcut icon" href="./favicons/favicon.ico")
     script(src="https://api-maps.yandex.ru/2.1/?apikey=ab25fe1d-87cb-4946-b30e-4fec31d2a9b0&lang=ru_RU" type="text/javascript")
   body
-    include ../includes/popup
+    
     include ../includes/header
     main.main-content
       include ../includes/helimain
@@ -24,3 +24,4 @@ html(lang="ru")
       include ../includes/map
       include ../includes/reviews
     include ../includes/footer
+    include ../includes/popup

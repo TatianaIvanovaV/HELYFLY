@@ -67,10 +67,10 @@ $('.yandexmap-popup__carousel').slick({
       }
     ],
     customPaging : function(slider, i) {
-      return '<a href="#"><img src="assets/img/icons/dot.png" /><img src="assets/img/icons/active-dot.png" /></a>';
+      return '<a href="javascript:void(0);"><img src="assets/img/icons/dot.png" /><img src="assets/img/icons/active-dot.png" /></a>';
   },
-    prevArrow:"<img class='a-left control-c prev slick-prev' src='assets/img/icons/arrow-left.png'>",
-    nextArrow:"<img class='a-right control-c next slick-next' src='assets/img/icons/arrow-right.png'>"
+    prevArrow:`<div class="arrow-left slick-prev"><img src='assets/img/icons/arrow-left.png'></div>`,
+    nextArrow:`<div class="arrow-right slick-next"><img src='assets/img/icons/arrow-right.png'></div>`,
 });
 /*---  read-more --- */
   $('.autor-about__span').click(function(){
