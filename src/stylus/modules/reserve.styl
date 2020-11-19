@@ -1,13 +1,13 @@
 .reserve
   padding 48px 0 82px
-  +below(320px)
+  @media $phone-m
     padding 4px 0 45px
   &__h3
     font-weight 500
     font-size 20px
     line-height 30px
     margin-bottom 23px
-    +below(320px)
+    @media $phone-m
       font-weight normal
       font-size 28px
       line-height 34px
@@ -23,29 +23,29 @@
     padding 24px 0 14px 30px 
     display flex
     justify-content flex-start 
-    +below(320px)
+    @media $phone-m
       justify-content center
       padding 0
       >img 
         display none
   &__p
     padding 4px 16px 0 0 
-    +below(320px) 
+    @media $phone-m
       padding 16px 0 15px
   &__time
     border-top 1px solid light-grey
     padding 10px 30px 18px 30px
     display flex
     justify-content space-between
-    +below(576px)
+    @media $phone
       flex-direction column
       padding 21px 20px 30px
   &__timetable
-    +below(320px)
+    @media $phone-m
       margin-bottom 20px
     >p
       margin-top 8px
-      +below(320px)
+      @media $phone-m
         margin-top 7px
   &__cost
     font-weight 600
@@ -61,7 +61,7 @@
     height 50px  
     text-align center 
     margin 30px 0 0
-    +below(320px)
+    @media $phone-m
       margin 0
     &:hover
       background orange
@@ -70,7 +70,7 @@
       cursor pointer
   &__rating
     padding 22px 0 16px 27px
-    +below(320px)
+    @media $phone-m
       border-top 0.5px solid light-grey
       padding 17px 0 12px 18px
       & .many-reviews__span

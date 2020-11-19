@@ -24,27 +24,28 @@
     padding 22px 22px
     z-index 12
     display none
-    +below(768px)
+    @media screen and (min-width: 577px) and (max-width: 768px)
       margin 231px 10%
-    +below(576px) 
+    @media $phone
       max-width 290px
       height 946px
       padding 17px 10px 0 
+    @media screen and (min-width: 321px) and (max-width: 576px) 
       margin 231px auto 0
-    +below(320px)
+    @media $phone-m
       margin 231px 15px
     &.active
       display block
   &__close
     display flex
     justify-content flex-end
-    +below(576px)
+    @media $phone
       margin-right 6px
     &-button
       cursor pointer
       width 20px
       height 20px
-      +below(576px)
+      @media $phone
         width 17px
         height 17px  
       >img 
@@ -56,20 +57,20 @@
     line-height 33px
     text-align center
     margin 17px 0 26px
-    +below(576px)
+    @media $phone
       font-size 18px
       line-height 30px
       margin 13px 0 30px
   &__form
     padding 0 75px
-    +below(576px)
+    @media $phone
       padding 0 
   &__title
     margin 10px 0
     font-weight 500
     font-size 16px
     line-height 20px
-    +below(576px)
+    @media $phone
       margin 0
   &__span
     color red
@@ -79,7 +80,7 @@
     border 1px solid light-grey
     border-radius 3px
     padding 0 14px 0 20px 
-    +below(576px)
+    @media $phone
       width 100%
       padding 0 11px 0 18px
       margin-top 10px
@@ -87,7 +88,7 @@
       border-bottom transparent
       margin-bottom 0
       border-radius 3px 3px 0 0
-      +below(576px)
+      @media $phone
         margin-top 12px
         height 46.5px
     &-validity
@@ -99,7 +100,7 @@
       width 50%
       float left
       border-radius 0 0 0 3px
-      +below(576px)
+      @media $phone
         width 100%
         float none
         height 48.5px
@@ -109,7 +110,7 @@
       width 50% 
       border-radius 0 0 3px 0
       border-left transparent 
-      +below(576px)
+      @media $phone
         width 100%
         height 48px
         border-radius 0 0 3px 3px
@@ -118,7 +119,7 @@
     position relative
     display flex
     margin 36px 0 0 2px
-    +below(576px)
+    @media $phone
       margin 23px 0 0
   &__check-orange 
     position absolute
@@ -145,10 +146,10 @@
     color white
     margin 21px 15px 0px
     padding-top 5px
-    +below(768px)
+    @media $tablet
       width 100%
       margin 21px 0 0px
-    +below(576px)
+    @media $phone
       max-width 250px
       margin 22px 10px 0
       padding-top 0
@@ -167,7 +168,7 @@
     &:focus 
       outline none
 input
-  +below(576px)
+  @media $phone
     &[type="date"]
       margin-bottom 14px
     &[type="email"]
@@ -186,7 +187,7 @@ input
         position absolute
         top 0
         left 3px
-        +below(320px)
+        @media $phone-m
           top 0
   &[type="date"]
     background none

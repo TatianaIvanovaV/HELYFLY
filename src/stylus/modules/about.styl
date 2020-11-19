@@ -2,25 +2,25 @@
   padding 70px 0 0
   display flex
   justify-content space-between
-  +below(576px)
+  @media $phone
     padding 38px 0 0
     flex-direction column-reverse
   &-discription
     width 50%
-    +below(768px)
+    @media screen and (min-width: 576px) and (max-width: 768px)
       width 70%
-    +below(576px)
+    @media $phone
       width 100%
     &__title
       margin-right 15px
-      +below(576px)
+      @media $phone
         margin-right 0px
     &__h2
       font-weight 500
       font-size 40px
       line-height 49px
       margin-bottom 10px
-      +below(576px)
+      @media $phone
         display none
       &--mob
         font-weight 300
@@ -29,24 +29,25 @@
         line-height 34px
         text-align center 
         margin-bottom 12px
-        +below(576px)
+        @media $phone
           display block
     &__p
       font-size 18px
       line-height 26px
-      +below(576px)
-        margin-top 40px
+      @media $phone
         font-size 14px
         line-height 20px
-      +below(320px)
+      @media screen and (min-width: 321px) and (max-width: 576px)
+        margin-top 40px
+      @media $phone-m
         margin-top 0
     &__list
       margin-top 18px
-      +below(576px)
+      @media $phone
         display none
       &--mob
         display none
-        +below(576px)
+        @media $phone
           margin-top 34px
           display block
     &__item   
@@ -56,7 +57,7 @@
       margin-bottom 8px
       display flex
       align-items center
-      +below(576px)
+      @media $phone
         height 32px
         margin-bottom 11px
         font-weight 500
@@ -64,23 +65,22 @@
           width 35px
       >span 
         margin-left 12px
-        +below(320px)
+        @media $phone-m
           margin-left 8px      
     &__rating 
       margin-top 26px
       border-top 0.5px solid light-grey
       border-bottom 0.5px solid light-grey 
-      +below(320px)
+      @media $phone-m
         margin-top 25px
   &-video
     width 554px
     left 3px
     position relative
-    +below(576px)
+    @media $phone
       width 100%
       left 0px
-    +below(320px)
-      width 100%
+    @media $phone-m
       margin-bottom 34px
     &__preview 
       position relative
@@ -99,7 +99,7 @@
         top 0px
         margin 58% 7% 0 0
         right 0px
-        +below(320px)
+        @media $phone-m
           height 17px
           width 12px
       &:hover

@@ -2,7 +2,6 @@
 @import "utils/reset.styl"
 @import "utils/fonts.styl"
 @import "utils/vars.styl"
-@import "utils/media.styl"
 
 
 *,
@@ -21,7 +20,7 @@ body
   width 100%
   margin 0 auto
   max-width 1140px
-  +below(1140px)
+  @media $desktop
     padding 0 15px
 ul, li 
   list-style none
@@ -37,34 +36,32 @@ a
   justify-content flex-start
   align-items center
   height 87px 
-  +below(320px)
-    height 69px
+  @media $tablet
     font-size 14px
+  @media $phone-m
+    height 69px
   >.cup-img 
     padding 0 0px 9px 2px
   &__inner
     display flex
     justify-content flex-start
     align-items center
-    +below(992px)
+    @media $laptop
       flex-direction column
-      align-items flex-start
+      align-items flex-start 
+    @media screen and (min-width: 321px) and (max-width: 992px)
       margin 0 0 0 10px
-      padding 0 0 10px
-      +below(320px)
-        margin 0 0 0 14px
-        padding 0px
+    @media $phone-m
+      margin 3px 0 0 14px
+    >.stars-group-img
+      @media $laptop
+        margin-top 6px
   &__span
     margin 0 15px 0 10px
-    +below(992px)
+    @media screen and (min-width: 321px) and (max-width: 992px)
       margin 0
-    +below(320px)
+    @media $phone-m
       margin -4px 0 4px 
-  >.stars-group-img
-    +below(992px)
-      margin 0
-    +below(320px)
-      margin 0 /*3px 0 0 48px*/
 .open-scr
   color blue
   cursor pointer
@@ -75,13 +72,13 @@ a
 .expand
   display block !important 
 .d-none 
-  +below(320px)
+  @media $phone-m
     display none
 .d-block
   display none
-  +below(320px)
+  @media $phone-m
     display block
 .bold
   font-weight bold
-  +below(320px)
+  @media $phone-m
     font-weight normal

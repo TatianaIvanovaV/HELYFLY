@@ -1,6 +1,6 @@
 .footer
   padding-top 78px
-  +below(576px)
+  @media $phone
     padding-top 70px
   &-upper
     &__main
@@ -11,7 +11,7 @@
       font-size 31px
       font-weight 500
       letter-spacing -0.6px
-      +below(576px)
+      @media $phone
         padding 0
         margin-left -2px
         font-size 20px
@@ -20,7 +20,7 @@
       padding-right 55px
       margin-bottom 48px
       display flex
-      +below(576px)
+      @media $phone
         position relative
         padding 0
         margin-bottom 20px
@@ -28,7 +28,7 @@
       display flex
     &__item
       margin-right 30px
-      +below(576px)
+      @media $phone
         &:last-of-type
           margin-right 0
     &__a
@@ -36,7 +36,7 @@
         vertical-align middle
     &__language
       position relative
-      +below(576px)
+      @media $phone
         position absolute
         top 73px
         right 0px
@@ -62,27 +62,27 @@
       right 0
   &-lower
     background #FAF9F8
-    +below(576px)
+    @media $phone
       border-top 1px solid grey
       background white
     &__main
       display flex
       padding 5px 0 30px
-      +below(576px)
+      @media $phone
         padding 0
         display block
     &__cards
       padding 6px 0 0 67px
-      +below(576px)
+      @media $phone
          padding 26px 0 0
       >img 
         margin-right 20px
-        +below(576px)
+        @media $phone
           margin-right 16px
           width 34px
           height auto
       >img.paypal-img
-        +above(576px)
+        @media $phone
           display none
     &__copyright
       color light-grey
@@ -90,14 +90,14 @@
       line-height 17px
       margin 0 auto
       padding-right 16.5%
-      +below(576px) 
+      @media $phone
         text-align center
         padding-right 0
         margin 18px 0 110px 0
     &__techapp
       margin-bottom 7px
       padding-left 9px
-      +below(576px)
+      @media $phone
         margin-bottom 11px
         padding-left 0px
     &__tel

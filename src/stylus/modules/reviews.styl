@@ -1,22 +1,22 @@
 .reviews
   padding-top 130px
-  +below(576px)
+  @media $phone
     padding-top 36px
   &__h4
     font-weight 500
     font-size 20px
     line-height 29px
-    +below(320px)
+    @media $phone-m
       font-size 28px
       line-height 42px
       text-align center
   &__list
     margin-top 46px
   &__item:nth-child
-    +above(320px)
+    @media screen and (min-width: 321px)
       &(n+4)
         display none
-    +below(320px)
+    @media $phone-m
       &(n+3)
         display none 
   &__show
@@ -28,10 +28,10 @@
     padding 7px 0
   &__inner
     margin-right 12px
-    +below(320px)
+    @media $phone-m
       margin-right 0px
     >img
-      +below(320px)
+      @media $phone-m
         &:first-of-type
           display none
         &:last-of-type
@@ -40,14 +40,14 @@
         transform rotate(180deg)
 .customer
   margin-bottom 30px
-  +below(576px)
+  @media $phone
     width 100%
     position relative
   &__avatar 
     display inline-block
     vertical-align top
   &__avatar img
-    +below(576px)
+    @media $phone
       width 84px
       height 84px 
   &__main
@@ -55,10 +55,10 @@
     margin 10px 0 0 16px
     max-width 510px
     border-bottom 0.5px solid light-grey
-    +below(576px)
+    @media $phone
       margin 5px 0 0
   &__for-mob-group
-    +below(576px)
+    @media $phone
       position absolute
       top 4px 
       left 104px
@@ -67,20 +67,20 @@
     font-size 18px
     line-height 22px
     margin-bottom 12px
-    +below(576px)
+    @media $phone
       font-size 16px
       line-height 20px
       margin-bottom 8px
   &__stars-group
     margin 16px 52px 0 0
     float left
-    +below(576px)
+    @media $phone
       float none
       margin 14px 0 0
   &__opinion
     color light-grey
     padding-top 16px
-    +below(576px)
+    @media $phone
       padding 20px 0 0 4px
     &::before
       content url("../img/icons/checkbox.png")
@@ -91,7 +91,7 @@
     margin-top 25px
     font-size 16px
     line-height 24px
-    +below(576px)
+    @media $phone
       font-size 14px
       line-height 21px
       margin-top 15px
@@ -100,6 +100,6 @@
     line-height 21px
     color light-grey
     margin 15px 0 30px
-    +below(576px)
+    @media $phone
       padding 0
       margin 37px 0 40px

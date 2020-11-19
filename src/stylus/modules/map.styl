@@ -2,7 +2,7 @@
   height 509px
   width 100%
   z-index 2
-  +below(320px)
+  @media $phone-m
     height 423px
   &-popup
     position relative
@@ -15,28 +15,29 @@
       background white
       border 1px solid light-grey
       padding 50px 0 58px 30px
-      +below(768px)
+      @media screen and (min-width: 321px) and (max-width: 768px)
         width 300px
-      +below(576px)
+      @media screen and (max-width: 576px)
         position relative
-        height 380px
         padding 51px 0 0
         top 0
         margin-top 52px
         left 8px
-      +below(320px)
-        width 94.5%
+      @media screen and (min-width: 321px) and (max-width: 576px)
+        height 380px
+      @media screen and (max-width: 320px)
+        width 95.5%
         height 100%
     &__list,
     &__list-autor
       display flex
       margin-bottom 35px
     &__list
-      +below(576px)
+      @media $phone
         padding-left 10px
         margin-bottom 24px
     &__list-autor
-      +below(576px)
+      @media $phone
         padding 13px 0 0 30px
         margin-bottom 12px
     &__num
@@ -50,7 +51,7 @@
       height 61px
       width 61px
       padding-top 5px
-      +below(576px)
+      @media $phone
         height 66px
         width 66px 
         margin 0 auto
@@ -62,7 +63,7 @@
       flex-direction column
       margin-left 18px
       padding-top 2px
-      +below(576px)
+      @media $phone
         margin-left 0px
         padding-top 18px
     &__title
@@ -70,7 +71,7 @@
       font-size 18px
       line-height 27px
       margin-bottom 5px
-      +below(576px)
+      @media $phone
         font-size 16px
         line-height 23px
         margin-bottom 5px
@@ -78,7 +79,7 @@
     &__text
       font-size 18px
       line-height 26px
-      +below(576px)
+      @media $phone
         font-size 14px
         line-height 20px
         text-align center
@@ -96,14 +97,14 @@
     font-weight 500
     font-size 18px
     line-height 22px
-    +below(576px)
+    @media $phone
       font-size 16px
       line-height 20px
   &__rang
     margin-top 3px
     font-size 16px
     line-height 24px
-    +below(576px)
+    @media $phone
       font-size 14px
       line-height 21px
   &__info
@@ -112,7 +113,7 @@
     line-height 21px
     color blue
     cursor pointer
-    +below(576px)
+    @media $phone
       margin 3px 0 0px 
     &:hover
       text-decoration underline
