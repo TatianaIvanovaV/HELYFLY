@@ -21,7 +21,7 @@ module.exports = {
         // filename: '[name].js', //[name] == ярлыку из entry, т.е. каждой точке входа будет соответствовать свой файл
         filename: `js/[name].[hash].js`, // используя синтаксис ES6, определяем новый путь для названия результирующего файла
         path: PATHS.dist,    // указываем каталог для создания output
-        publicPath: '/' // каталог для webpack-dev-server, где он ищет index.html
+        publicPath: './' // каталог для webpack-dev-server, где он ищет index.html
     },
     module: {
         rules: [ // на каждое расширение файла по правилу в виде объекта
